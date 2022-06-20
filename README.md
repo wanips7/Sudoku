@@ -8,3 +8,5 @@ It's a sudoku game. Made with Firemonkey. Not optimized for android.
 ![sudoku2](https://user-images.githubusercontent.com/43500333/174623515-46d40c3b-a988-4a41-887b-65987517ecd0.jpg)
   
 </details>
+
+[Download](https://github.com/wanips7/Sudoku/releases/latest)
