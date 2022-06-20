@@ -1,0 +1,2534 @@
+object FormMain: TFormMain
+  Left = 30
+  Top = 0
+  Caption = 'Modern sudoku'
+  ClientHeight = 900
+  ClientWidth = 512
+  Position = DesktopCenter
+  StyleBook = StyleBook1
+  Visible = True
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Left = 30
+  DesignerMasterStyle = 0
+  object TabControl: TTabControl
+    Align = Client
+    ClipChildren = True
+    Size.Width = 512.000000000000000000
+    Size.Height = 900.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'TabControlStyle1'
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    OnChange = TabControlChange
+    Sizes = (
+      512s
+      874s
+      512s
+      874s
+      512s
+      874s
+      512s
+      874s
+      512s
+      874s
+      512s
+      874s
+      512s
+      874s
+      512s
+      874s)
+    object TabItemMainMenu: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 78.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'MainMenu'
+      ExplicitSize.cx = 120.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object CornerButtonNewGame: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 138.813674926757800000
+        Position.Y = 248.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 218.278060913085900000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerButton1Style1'
+        TabOrder = 5
+        Text = 'New game'
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonNewGameClick
+      end
+      object Label1: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 41.000000000000000000
+        Position.Y = 101.999992370605500000
+        Size.Width = 424.000000000000000000
+        Size.Height = 47.999992370605470000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'Modern sudoku'
+        TabOrder = 6
+      end
+      object CornerButtonContinueGame: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 138.813674926757800000
+        Position.Y = 319.999938964843800000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 218.278060913085900000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerButton1Style1'
+        TabOrder = 4
+        Text = 'Continue'
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonContinueGameClick
+      end
+      object CornerButtonStatistics: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 138.813674926757800000
+        Position.Y = 391.999786376953100000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 218.278060913085900000
+        Size.Height = 47.999938964843750000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerButton1Style1'
+        TabOrder = 3
+        Text = 'Statistics'
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonStatisticsClick
+      end
+      object CornerButtonSettings: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 138.813674926757800000
+        Position.Y = 464.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 218.278060913085900000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerButton1Style1'
+        TabOrder = 2
+        Text = 'Settings'
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonSettingsClick
+      end
+      object CornerButtonExit: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 138.813674926757800000
+        Position.Y = 655.999694824218800000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 218.278060913085900000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerButton1Style1'
+        TabOrder = 0
+        Text = 'Exit'
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonExitClick
+      end
+      object CornerButtonAbout: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 138.813674926757800000
+        Position.Y = 535.999877929687500000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 218.278060913085900000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerButton1Style1'
+        TabOrder = 1
+        Text = 'About'
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonAboutClick
+      end
+    end
+    object TabItemSettings: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 63.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Settings'
+      ExplicitSize.cx = 105.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object PresentedScrollBox2: TPresentedScrollBox
+        AutoCalculateContentSize = False
+        AutoHide = True
+        ContentSize.Width = 441.000000000000000000
+        ScrollDirections = Vertical
+        Position.X = 32.000000000000000000
+        Position.Y = 62.000000000000000000
+        Size.Width = 441.000000000000000000
+        Size.Height = 531.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 441.000000000000000000
+        Viewport.Height = 531.000000000000000000
+        object LabelHideImpossibleValues: TLabel
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          StyledSettings = [Family]
+          Position.X = 40.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 241.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstylelabel'
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.Font.StyleExt = {00030000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          Text = 'Hide Impossible Values'
+          TabOrder = 3
+        end
+        object SwitchHideImpossibleValues: TSwitch
+          IsChecked = False
+          Opacity = 0.100000001490116100
+          Position.X = 336.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          OnPaint = SwitchHideImpossibleValuesPaint
+          OnSwitch = SwitchHideImpossibleValuesSwitch
+        end
+        object LabelHighlightColsRowSquares: TLabel
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          StyledSettings = [Family]
+          Position.X = 40.000000000000000000
+          Position.Y = 88.000000000000000000
+          Size.Width = 241.000000000000000000
+          Size.Height = 57.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstylelabel'
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.Font.StyleExt = {00030000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          Text = 'Highlight columns, rows and squares'
+          TabOrder = 2
+        end
+        object SwitchHighlightColsRowSquares: TSwitch
+          IsChecked = False
+          Opacity = 0.100000001490116100
+          Position.X = 336.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          OnPaint = SwitchHideImpossibleValuesPaint
+          OnSwitch = SwitchHighlightColsRowSquaresSwitch
+        end
+        object LabelShowTimer: TLabel
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          StyledSettings = [Family]
+          Position.X = 43.000000000000000000
+          Position.Y = 168.000000000000000000
+          Size.Width = 230.000000000000000000
+          Size.Height = 43.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstylelabel'
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.Font.StyleExt = {00030000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          Text = 'Show timer'
+          TabOrder = 1
+        end
+        object SwitchShowTimer: TSwitch
+          IsChecked = False
+          Opacity = 0.100000001490116100
+          Position.X = 336.000000000000000000
+          Position.Y = 168.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          OnPaint = SwitchHideImpossibleValuesPaint
+          OnSwitch = SwitchShowTimerSwitch
+        end
+        object LabelHighlightIdentNums: TLabel
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          StyledSettings = [Family]
+          Position.X = 40.000000000000000000
+          Position.Y = 240.000000000000000000
+          Size.Width = 233.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'buttonstylelabel'
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.Font.StyleExt = {00030000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          Text = 'Highlight identical numbers'
+          TabOrder = 0
+        end
+        object SwitchHighlightIdentNums: TSwitch
+          IsChecked = False
+          Opacity = 0.100000001490116100
+          Position.X = 336.000000000000000000
+          Position.Y = 240.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          OnPaint = SwitchHideImpossibleValuesPaint
+          OnSwitch = SwitchHighlightIdentNumsSwitch
+        end
+      end
+      object CornerButton3: TCornerButton
+        Images = ImageList
+        ImageIndex = 1
+        Position.X = 16.094299316406250000
+        Position.Y = 13.999995231628420000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 44.259296417236330000
+        Size.Height = 43.999988555908200000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 4
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonBackClick
+      end
+    end
+    object TabItemInGame: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 61.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'InGame'
+      ExplicitSize.cx = 103.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object RectangleBackground: TRectangle
+        Align = Client
+        Fill.Color = xFFDDDDD6
+        Size.Width = 512.000000000000000000
+        Size.Height = 874.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object LabelGameDifficult: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 16.000000000000000000
+        Position.Y = 71.999992370605470000
+        Size.Width = 145.000000000000000000
+        Size.Height = 32.999992370605470000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = 'Medium'
+        TabOrder = 65
+      end
+      object LabelTimeLeft: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 208.000000000000000000
+        Position.Y = 78.000000000000000000
+        Size.Width = 89.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = '00:00'
+        TabOrder = 0
+      end
+      object CornerButtonBack: TCornerButton
+        Images = ImageList
+        ImageIndex = 1
+        Position.X = 16.094299316406250000
+        Position.Y = 13.999995231628420000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 44.259296417236330000
+        Size.Height = 43.999988555908200000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 4
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonBackClick
+      end
+      object CornerButtonPause: TCornerButton
+        Anchors = [akTop, akRight]
+        Images = ImageList
+        ImageIndex = 0
+        Position.X = 440.000000000000000000
+        Position.Y = 14.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 2
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonPauseClick
+      end
+      object RectangleGrid: TRectangle
+        Align = Horizontal
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Fill.Color = claBeige
+        Position.Y = 112.000000000000000000
+        Size.Width = 512.000000000000000000
+        Size.Height = 481.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Thickness = 0.000000000000000000
+        OnPaint = RectangleGridPaint
+        object ShadowEffect1: TShadowEffect
+          Distance = 1.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.400000005960464500
+          Opacity = 0.200000002980232200
+          ShadowColor = claBlack
+        end
+      end
+      object RectangleControls: TRectangle
+        Fill.Color = claBlanchedalmond
+        Position.X = 16.000000000000000000
+        Position.Y = 632.000000000000000000
+        Size.Width = 481.000000000000000000
+        Size.Height = 233.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Thickness = 0.000000000000000000
+        object CornerButtonClearCell: TCornerButton
+          StyledSettings = [Family, Style]
+          Images = ImageList
+          ImageIndex = 4
+          Position.X = 165.000000000000000000
+          Position.Y = 15.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'cornerselectbutton'
+          TabOrder = 93
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          OnClick = CornerButtonClearCellClick
+        end
+        object CornerButtonNotesMode: TCornerButton
+          StyledSettings = [Family, Style]
+          Images = ImageList
+          ImageIndex = 3
+          Position.X = 165.000000000000000000
+          Position.Y = 87.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 94
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          OnClick = CornerButtonNotesModeClick
+          object GlowEffect: TGlowEffect
+            Softness = 0.100000001490116100
+            GlowColor = claViolet
+            Opacity = 1.000000000000000000
+            Enabled = False
+          end
+        end
+        object CornerButtonUndoLastAction: TCornerButton
+          StyledSettings = [Family, Style]
+          Images = ImageList
+          ImageIndex = 2
+          Position.X = 165.000000000000000000
+          Position.Y = 159.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 95
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          OnClick = CornerButtonUndoLastActionClick
+        end
+        object CornerButtonSetNum1: TCornerButton
+          StyledSettings = [Family]
+          Position.X = 261.000000000000000000
+          Position.Y = 15.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 102
+          Text = '1'
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.Font.StyleExt = {00020000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+        object CornerButtonSetNum2: TCornerButton
+          StyledSettings = [Family]
+          Position.X = 333.000000000000000000
+          Position.Y = 15.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 92
+          Text = '2'
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.Font.StyleExt = {00020000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+        object CornerButtonSetNum3: TCornerButton
+          StyledSettings = [Family]
+          Position.X = 405.000000000000000000
+          Position.Y = 15.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 91
+          Text = '3'
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.Font.StyleExt = {00020000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+        object CornerButtonSetNum4: TCornerButton
+          StyledSettings = [Family]
+          Position.X = 261.000000000000000000
+          Position.Y = 87.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 97
+          Text = '4'
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.Font.StyleExt = {00020000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+        object CornerButtonSetNum5: TCornerButton
+          StyledSettings = [Family]
+          Position.X = 333.000000000000000000
+          Position.Y = 87.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 99
+          Text = '5'
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.Font.StyleExt = {00020000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+        object CornerButtonSetNum6: TCornerButton
+          StyledSettings = [Family]
+          Position.X = 405.000000000000000000
+          Position.Y = 87.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 100
+          Text = '6'
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.Font.StyleExt = {00020000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+        object CornerButtonSetNum7: TCornerButton
+          StyledSettings = [Family]
+          Position.X = 261.000000000000000000
+          Position.Y = 159.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 96
+          Text = '7'
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.Font.StyleExt = {00020000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+        object CornerButtonSetNum8: TCornerButton
+          StyledSettings = [Family]
+          Position.X = 333.000000000000000000
+          Position.Y = 159.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 98
+          Text = '8'
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.Font.StyleExt = {00020000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+        object CornerButtonSetNum9: TCornerButton
+          StyledSettings = [Family]
+          Position.X = 405.000000000000000000
+          Position.Y = 159.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 60.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'CornerSelectButton'
+          TabOrder = 101
+          Text = '9'
+          TextSettings.Font.Size = 36.000000000000000000
+          TextSettings.Font.StyleExt = {00020000000000000004000000}
+          TextSettings.FontColor = xFF525252
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+        end
+      end
+    end
+    object TabItemStatistics: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 46.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Stats'
+      ExplicitSize.cx = 108.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object CornerButton4: TCornerButton
+        Images = ImageList
+        ImageIndex = 1
+        Position.X = 16.094299316406250000
+        Position.Y = 13.999995231628420000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 44.259296417236330000
+        Size.Height = 43.999988555908200000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 11
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonBackClick
+      end
+      object TabControlStats: TTabControl
+        Position.X = 16.000000000000000000
+        Position.Y = 72.000000000000000000
+        Size.Width = 473.000000000000000000
+        Size.Height = 593.000000000000000000
+        Size.PlatformDefault = False
+        TabIndex = 0
+        TabOrder = 12
+        TabPosition = PlatformDefault
+        Sizes = (
+          473s
+          567s
+          473s
+          567s
+          473s
+          567s
+          473s
+          567s
+          473s
+          567s)
+        object TabItemCommon: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 69.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Common'
+          ExplicitSize.cx = 69.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+        end
+        object TabItemEasy: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 44.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Easy'
+          ExplicitSize.cx = 44.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+        end
+        object TabItemMedium: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 65.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Medium'
+          ExplicitSize.cx = 65.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+        end
+        object TabItemHard: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 46.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Hard'
+          ExplicitSize.cx = 46.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+        end
+        object TabItemExpert: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 54.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Expert'
+          ExplicitSize.cx = 54.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+        end
+      end
+      object LabelCurrentStatsPage: TLabel
+        StyledSettings = [Family]
+        Position.X = 192.000000000000000000
+        Position.Y = 744.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'Difficult'
+        TabOrder = 14
+      end
+      object CornerButtonPrevStats: TCornerButton
+        StyledSettings = [Family, Size, Style]
+        Images = ImageList
+        ImageIndex = 1
+        Position.X = 104.000000000000000000
+        Position.Y = 734.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 49.000000000000000000
+        Size.Height = 51.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 9
+        TextSettings.FontColor = claAliceblue
+        TextSettings.VertAlign = Leading
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonPrevStatsClick
+      end
+      object CornerButtonNextStats: TCornerButton
+        StyledSettings = [Family, Size, Style]
+        Images = ImageList
+        ImageIndex = 7
+        Position.X = 352.000000000000000000
+        Position.Y = 734.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 49.000000000000000000
+        Size.Height = 51.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 10
+        Text = '>'
+        TextSettings.FontColor = claAliceblue
+        TextSettings.VertAlign = Leading
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonNextStatsClick
+      end
+      object LabelSolvedText: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 48.000000000000000000
+        Position.Y = 128.000000000000000000
+        Size.Width = 177.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = 'Solved:'
+        TabOrder = 16
+      end
+      object LabelUnsolvedText: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 48.000000000000000000
+        Position.Y = 168.000000000000000000
+        Size.Width = 169.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = 'Unsolved:'
+        TabOrder = 17
+      end
+      object LabelBestTimeText: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 48.000000000000000000
+        Position.Y = 208.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = 'Best time:'
+        TabOrder = 6
+      end
+      object LabelWorstTimeText: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 48.000000000000000000
+        Position.Y = 248.000000000000000000
+        Size.Width = 201.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = 'Worst time:'
+        TabOrder = 3
+      end
+      object LabelAverageTimeText: TLabel
+        AutoSize = True
+        StyledSettings = [Family]
+        Position.X = 48.000000000000000000
+        Position.Y = 288.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = 'Average time:'
+        TabOrder = 8
+      end
+      object LabelAverageTimeValue: TLabel
+        StyledSettings = [Family]
+        Position.X = 376.000000000000000000
+        Position.Y = 288.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = '31:08'
+        TabOrder = 1
+      end
+      object LabelBestTimeValue: TLabel
+        StyledSettings = [Family]
+        Position.X = 376.000000000000000000
+        Position.Y = 208.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = '07:53'
+        TabOrder = 4
+      end
+      object LabelSolvedValue: TLabel
+        StyledSettings = [Family]
+        Position.X = 384.000000000000000000
+        Position.Y = 128.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = '0'
+        TabOrder = 7
+      end
+      object LabelUnsolvedValue: TLabel
+        StyledSettings = [Family]
+        Position.X = 384.000000000000000000
+        Position.Y = 168.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = '0'
+        TabOrder = 5
+      end
+      object LabelWorstTimeValue: TLabel
+        StyledSettings = [Family]
+        Position.X = 376.000000000000000000
+        Position.Y = 248.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = '48:24'
+        TabOrder = 2
+      end
+    end
+    object TabItemSelectDifficult: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 62.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Difficult'
+      ExplicitSize.cx = 62.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object CornerButtonStartGame: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 160.943252563476600000
+        Position.Y = 598.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 194.136917114257800000
+        Size.Height = 51.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerButton1Style1'
+        TabOrder = 0
+        Text = 'Start'
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonStartGameClick
+      end
+      object LabelDifficult: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 145.000000000000000000
+        Position.Y = 461.999938964843800000
+        Size.Width = 224.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'Difficult'
+        TabOrder = 1
+      end
+      object CornerButtonLessDifficult: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, Style]
+        Images = ImageList
+        ImageIndex = 1
+        Position.X = 88.000000000000000000
+        Position.Y = 454.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 49.000000000000000000
+        Size.Height = 51.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 2
+        TextSettings.FontColor = claAliceblue
+        TextSettings.VertAlign = Leading
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonPrevDifficultClick
+      end
+      object CornerButtonMoreDifficult: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, Style]
+        Images = ImageList
+        ImageIndex = 7
+        Position.X = 376.000000000000000000
+        Position.Y = 454.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 49.000000000000000000
+        Size.Height = 51.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 3
+        Text = '>'
+        TextSettings.FontColor = claAliceblue
+        TextSettings.VertAlign = Leading
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonNextDifficultClick
+      end
+      object CornerButton2: TCornerButton
+        Images = ImageList
+        ImageIndex = 1
+        Position.X = 16.094299316406250000
+        Position.Y = 13.999995231628420000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 44.259296417236330000
+        Size.Height = 43.999988555908200000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 4
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButton2Click
+      end
+    end
+    object TabItemPaused: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 58.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Paused'
+      ExplicitSize.cx = 58.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Label2: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 184.000000000000000000
+        Position.Y = 378.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'Paused'
+        TabOrder = 106
+      end
+      object CornerButtonResume: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 160.943252563476600000
+        Position.Y = 683.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 188.102340698242200000
+        Size.Height = 46.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerButton1Style1'
+        TabOrder = 4
+        Text = 'Resume'
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonResumeClick
+      end
+    end
+    object TabItemEndGame: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 71.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'EndGame'
+      ExplicitSize.cx = 71.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object CornerButtonGoToMainMenu: TCornerButton
+        Align = Scale
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 160.943252563476600000
+        Position.Y = 690.999572753906300000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 188.102340698242200000
+        Size.Height = 46.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerButton1Style1'
+        TabOrder = 4
+        Text = 'Main menu'
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonBackClick
+      end
+      object LabelEndGame: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 192.000000000000000000
+        Position.Y = 314.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'Solved!'
+        TabOrder = 111
+      end
+      object LabelTimeSpent: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 104.000000000000000000
+        Position.Y = 433.999755859375000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = 'Time spent:'
+        TabOrder = 109
+      end
+      object LabelBestTime: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 104.000000000000000000
+        Position.Y = 474.000000000000000000
+        Size.Width = 145.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = 'Best time:'
+        TabOrder = 106
+      end
+      object LabelTimeSpentValue: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 328.000000000000000000
+        Position.Y = 433.999755859375000000
+        Size.Width = 81.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = '00:00'
+        TabOrder = 108
+      end
+      object LabelBestTimeEndValue: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 328.000000000000000000
+        Position.Y = 474.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        Text = '00:00'
+        TabOrder = 107
+      end
+      object LabelItsRecord: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 192.000000000000000000
+        Position.Y = 361.999877929687500000
+        Size.Width = 129.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'It'#39's record!'
+        TabOrder = 110
+      end
+    end
+    object TabItemAbout: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 53.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'About'
+      ExplicitSize.cx = 53.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object CornerButton6: TCornerButton
+        Images = ImageList
+        ImageIndex = 1
+        Position.X = 24.141473770141600000
+        Position.Y = 21.999994277954100000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 44.259338378906250000
+        Size.Height = 43.999992370605470000
+        Size.PlatformDefault = False
+        StyleLookup = 'CornerSmallButton'
+        TabOrder = 4
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = CornerButtonBackClick
+      end
+      object Label3: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 145.000000000000000000
+        Position.Y = 357.999755859375000000
+        Size.Width = 220.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'Sudoku game'
+        TabOrder = 40
+      end
+      object Label4: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 200.000000000000000000
+        Position.Y = 549.999938964843800000
+        Size.Width = 120.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'Version 0.7'
+        TabOrder = 39
+      end
+      object Label5: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 88.000000000000000000
+        Position.Y = 662.000000000000000000
+        Size.Width = 345.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'https://github.com/wanips7'
+        TabOrder = 38
+      end
+      object Label6: TLabel
+        Align = Scale
+        StyledSettings = [Family]
+        Position.X = 72.000000000000000000
+        Position.Y = 629.999938964843800000
+        Size.Width = 377.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.FontColor = xFF525252
+        TextSettings.HorzAlign = Center
+        Text = 'Author: wanips'
+        TabOrder = 37
+      end
+    end
+  end
+  object StyleBook1: TStyleBook
+    Styles = <
+      item
+      end
+      item
+        Platform = 'Windows 10 Desktop'
+        ResourcesBin = {
+          464D585F5354594C4520322E35010612747261636B6261725F7374796C652E70
+          6E670396020613436F726E6572427574746F6E315374796C653103C303061143
+          6F726E6572536D616C6C427574746F6E03AC030612436F726E657253656C6563
+          74427574746F6E038E030613436F726E6572427574746F6E325374796C653103
+          0204061D547261636B4261724368616E6765446966666963756C745374796C65
+          3103AA0A062B7261636B4261724368616E6765446966666963756C745374796C
+          6531767468756D626261727374796C653103F106062B7261636B426172436861
+          6E6765446966666963756C745374796C6531687468756D626261727374796C65
+          3103F106060F436865636B426F78315374796C653103DB0B06134D6F6465726E
+          436865636B426F785374796C6503800300545046300654496D61676500095374
+          796C654E616D650612747261636B6261725F7374796C652E706E67154D756C74
+          695265734269746D61702E4865696768740214144D756C74695265734269746D
+          61702E576964746802140E4D756C74695265734269746D61700E010557696474
+          68021406486569676874021403504E470A7F01000089504E470D0A1A0A000000
+          0D49484452000000140000001408060000008D891D0D000000017352474200AE
+          CE1CE90000000467414D410000B18F0BFC61050000012949444154384FB59531
+          4EC33014869F9F6FC0CC80B8815750678EC05AA529472857801E01D2AA2B2323
+          73A48E8DB80013ACDCC031FF6F5BA248958A8CF9A4A4CF2FED27CB76FE1A3940
+          FBD09E7AEBAF504E703931721E1F0479C37DC0D55B6F5FBA9BEE3DF6F7F8290C
+          629A4DD3CA28533CB9C8DDC304D98ACA663D5D77F86EC8DD6FE1EC7176126CB8
+          45B9489D5FB334DEDCAFE6AB4F0E34B630B3421959C4DFC2C181E5AD396BE6F8
+          B8635DC8A57B751FC3F3B033DC80D18E4F47D7EC185853F57AAD7137FF2A2370
+          D0C535E4D1A8C5844297EA2A38C554D3A1AD015CE9D85444B13B7C9DEA001767
+          C877B31603857DAAABD02B5383873237CA81832E8D1184D4C8ED72E0A02BEE72
+          8C20A406EB4296D991D30679C6084255228DF1450707FF17B0FB94FF05887C01
+          D4DA71AF3F466ADE0000000049454E44AE4260820846696C654E616D65063444
+          3A5C50726F6772616D6D696E675C47616D65735C5375646F6B755C69636F6E73
+          5C747261636B6261725F7374796C652E706E670001055363616C650500000000
+          000000C0FF3F0001055363616C6505000000000000008000400001055363616C
+          650500000000000000C00040000005416C69676E070643656E74657207566973
+          69626C650800005450463007544C61796F757400095374796C654E616D650613
+          436F726E6572427574746F6E315374796C653105416C69676E070643656E7465
+          720A53697A652E57696474680500000000000000C106400B53697A652E486569
+          6768740500000000000000EC04401453697A652E506C6174666F726D44656661
+          756C74080756697369626C6508085461624F726465720259000A545265637461
+          6E676C6500095374796C654E616D65060A6261636B67726F756E6405416C6967
+          6E0708436F6E74656E74730A46696C6C2E436F6C6F7207097846463532353235
+          32064C6F636B6564090748697454657374080A53697A652E5769647468050000
+          0000000000C106400B53697A652E4865696768740500000000000000EC044014
+          53697A652E506C6174666F726D44656661756C74080C5374726F6B652E436F6C
+          6F720709784646443444344434001054496E6E6572476C6F7745666665637400
+          08536F66746E657373050000000000CDCCCCFD3F09476C6F77436F6C6F720709
+          784646344634383438074F7061636974790500000000006666E6FE3F07547269
+          67676572060E4973507265737365643D7472756507456E61626C656408000000
+          0654476C79706800095374796C654E616D65060A676C7970687374796C650C4D
+          617267696E732E4C65667405000000000000008000400B4D617267696E732E54
+          6F7005000000000000008001400D4D617267696E732E52696768740500000000
+          0000008000400E4D617267696E732E426F74746F6D0500000000000000800040
+          05416C69676E07044C6566740A53697A652E5769647468050000000000000080
+          03400B53697A652E48656967687405000000000000008003401453697A652E50
+          6C6174666F726D44656661756C7408000005545465787400095374796C654E61
+          6D6506047465787405416C69676E0706436C69656E74064C6F636B6564090748
+          697454657374080C4D617267696E732E4C6566740500000000000000A001400B
+          4D617267696E732E546F7005000000000000008000400D4D617267696E732E52
+          696768740500000000000000A001400E4D617267696E732E426F74746F6D0500
+          0000000000008000400A53697A652E57696474680500000000000000B706400B
+          53697A652E4865696768740500000000000000DC04401453697A652E506C6174
+          666F726D44656661756C7408165465787453657474696E67732E466F6E742E53
+          697A650500000000000000A00340165465787453657474696E67732E466F6E74
+          436F6C6F720709784646463346334633155465787453657474696E67732E576F
+          726457726170080000005450463007544C61796F757400095374796C654E616D
+          650611436F726E6572536D616C6C427574746F6E05416C69676E070643656E74
+          65720A53697A652E57696474680500000000000000E404400B53697A652E4865
+          696768740500000000000000AC04401453697A652E506C6174666F726D446566
+          61756C74080756697369626C6508085461624F726465720258000A5452656374
+          616E676C6500095374796C654E616D65060A6261636B67726F756E6405416C69
+          676E0708436F6E74656E74730946696C6C2E4B696E6407044E6F6E65064C6F63
+          6B6564090748697454657374080A53697A652E57696474680500000000000000
+          E404400B53697A652E4865696768740500000000000000AC04401453697A652E
+          506C6174666F726D44656661756C74080C5374726F6B652E436F6C6F72070978
+          4646443444344434001054496E6E6572476C6F774566666563740008536F6674
+          6E657373050000000000CDCCCCFD3F09476C6F77436F6C6F7207097846463446
+          34383438074F7061636974790500000000006666E6FE3F075472696767657206
+          0E4973507265737365643D7472756507456E61626C6564080000000654476C79
+          706800095374796C654E616D65060A676C7970687374796C650C4D617267696E
+          732E4C65667405000000000000008000400B4D617267696E732E546F70050000
+          00000000008001400D4D617267696E732E526967687405000000000000008000
+          400E4D617267696E732E426F74746F6D050000000000000080004005416C6967
+          6E07044C6566740A506F736974696F6E2E5805000000000000008002400A506F
+          736974696F6E2E590500000000000000C000400A53697A652E57696474680500
+          000000000000AC04400B53697A652E4865696768740500000000000000940440
+          1453697A652E506C6174666F726D44656661756C740807537472657463680800
+          0005545465787400095374796C654E616D6506047465787405416C69676E0706
+          436C69656E74064C6F636B6564090748697454657374080C4D617267696E732E
+          4C6566740500000000000000A001400B4D617267696E732E546F700500000000
+          0000008000400D4D617267696E732E52696768740500000000000000A001400E
+          4D617267696E732E426F74746F6D05000000000000008000400A53697A652E57
+          696474680500000000000000BC04400B53697A652E4865696768740500000000
+          0000009C04401453697A652E506C6174666F726D44656661756C740815546578
+          7453657474696E67732E576F726457726170080000005450463007544C61796F
+          757400095374796C654E616D650612436F726E657253656C656374427574746F
+          6E05416C69676E070643656E7465720A53697A652E5769647468050000000000
+          0000E404400B53697A652E4865696768740500000000000000AC04401453697A
+          652E506C6174666F726D44656661756C74080756697369626C6508085461624F
+          726465720257000A5452656374616E676C6500095374796C654E616D65060A62
+          61636B67726F756E6405416C69676E0708436F6E74656E74730946696C6C2E4B
+          696E6407044E6F6E65064C6F636B6564090748697454657374080A53697A652E
+          57696474680500000000000000E404400B53697A652E48656967687405000000
+          00000000AC04401453697A652E506C6174666F726D44656661756C74080C5374
+          726F6B652E436F6C6F720709784646443444344434001054496E6E6572476C6F
+          774566666563740008536F66746E657373050000000000CDCCCCFD3F09476C6F
+          77436F6C6F720709784646344634383438074F70616369747905000000000066
+          66E6FE3F0754726967676572060E4973507265737365643D7472756507456E61
+          626C6564080000000654476C79706800095374796C654E616D65060A676C7970
+          687374796C650C4D617267696E732E4C65667405000000000000008000400B4D
+          617267696E732E546F7005000000000000008001400D4D617267696E732E5269
+          67687405000000000000008000400E4D617267696E732E426F74746F6D050000
+          000000000080004005416C69676E070643656E7465720A53697A652E57696474
+          680500000000000000A004400B53697A652E4865696768740500000000000000
+          9404401453697A652E506C6174666F726D44656661756C740807537472657463
+          6808000005545465787400095374796C654E616D6506047465787405416C6967
+          6E0706436C69656E74064C6F636B6564090748697454657374080C4D61726769
+          6E732E4C6566740500000000000000A001400B4D617267696E732E546F700500
+          0000000000008000400D4D617267696E732E52696768740500000000000000A0
+          01400E4D617267696E732E426F74746F6D05000000000000008000400A53697A
+          652E57696474680500000000000000BC04400B53697A652E4865696768740500
+          0000000000009C04401453697A652E506C6174666F726D44656661756C740804
+          54657874060454657874155465787453657474696E67732E576F726457726170
+          080000005450463007544C61796F757400095374796C654E616D650613436F72
+          6E6572427574746F6E325374796C653105416C69676E070643656E7465720A53
+          697A652E57696474680500000000000000F004400B53697A652E486569676874
+          0500000000000000F004401453697A652E506C6174666F726D44656661756C74
+          080756697369626C6508085461624F726465720256000A5452656374616E676C
+          6500095374796C654E616D65060A6261636B67726F756E6405416C69676E0708
+          436F6E74656E74730946696C6C2E4B696E6407084772616469656E741446696C
+          6C2E4772616469656E742E506F696E74730E0105436F6C6F720708636C615768
+          697465064F66667365740500000000000000000000000105436F6C6F72070978
+          4646463046304630064F6666736574050000000000000080FE3F000105436F6C
+          6F720709784646443444344434064F6666736574050000000000000080FF3F00
+          00064C6F636B6564090748697454657374080A53697A652E5769647468050000
+          0000000000F004400B53697A652E4865696768740500000000000000F0044014
+          53697A652E506C6174666F726D44656661756C74080C5374726F6B652E436F6C
+          6F720709784646443444344434001054496E6E6572476C6F7745666665637400
+          08536F66746E657373050000000000CDCCCCFD3F09476C6F77436F6C6F720709
+          784646344634383438074F7061636974790500000000006666E6FE3F07547269
+          67676572060E4973507265737365643D7472756507456E61626C656408000000
+          0654476C79706800095374796C654E616D65060A676C7970687374796C650C4D
+          617267696E732E4C65667405000000000000008000400B4D617267696E732E54
+          6F7005000000000000008001400D4D617267696E732E52696768740500000000
+          0000008000400E4D617267696E732E426F74746F6D0500000000000000800040
+          05416C69676E07044C6566740A53697A652E5769647468050000000000000080
+          03400B53697A652E48656967687405000000000000008003401453697A652E50
+          6C6174666F726D44656661756C7408000005545465787400095374796C654E61
+          6D6506047465787405416C69676E0706436C69656E74064C6F636B6564090748
+          697454657374080C4D617267696E732E4C6566740500000000000000A001400B
+          4D617267696E732E546F7005000000000000008000400D4D617267696E732E52
+          696768740500000000000000A001400E4D617267696E732E426F74746F6D0500
+          0000000000008000400A53697A652E57696474680500000000000000C804400B
+          53697A652E4865696768740500000000000000E004401453697A652E506C6174
+          666F726D44656661756C7408155465787453657474696E67732E576F72645772
+          6170080000005450463007544C61796F757400095374796C654E616D65061D54
+          7261636B4261724368616E6765446966666963756C745374796C653105416C69
+          676E070643656E7465720A53697A652E57696474680500000000000000D10640
+          0B53697A652E48656967687405000000000000009803401453697A652E506C61
+          74666F726D44656661756C74080756697369626C6508085461624F7264657202
+          460B466978656448656967687402130009545374796C65546167000354616702
+          08095374796C654E616D6506095468756D6253697A6500000C545374796C654F
+          626A65637400095374796C654E616D65060668747261636B05416C69676E070A
+          5665727443656E746572064C6F636B6564090C536F757263654C6F6F6B757006
+          1B57696E646F7773203130204465736B746F707374796C652E706E670A506F73
+          6974696F6E2E5905000000000000008001400A53697A652E5769647468050000
+          0000000000D106400B53697A652E4865696768740500000000000000B0024014
+          53697A652E506C6174666F726D44656661756C74080A536F757263654C696E6B
+          0E010E436170496E736574732E4C65667405000000000000008000400F436170
+          496E736574732E526967687405000000000000008000400F536F757263655265
+          63742E4C6566740500000000000000E106400E536F75726365526563742E546F
+          700500000000000000B1064010536F75726365526563742E5269676874050000
+          00000000808D074011536F75726365526563742E426F74746F6D050000000000
+          0000BC064000010E436170496E736574732E4C6566740500000000000000C000
+          400F436170496E736574732E52696768740500000000000000C0004005536361
+          6C650500000000000000C0FF3F0F536F75726365526563742E4C656674050000
+          0000000080A807400E536F75726365526563742E546F70050000000000008084
+          074010536F75726365526563742E52696768740500000000000000D407401153
+          6F75726365526563742E426F74746F6D05000000000000808C074000010E4361
+          70496E736574732E4C65667405000000000000008001400F436170496E736574
+          732E52696768740500000000000000800140055363616C650500000000000000
+          8000400F536F75726365526563742E4C6566740500000000000000E107400E53
+          6F75726365526563742E546F700500000000000000B1074010536F7572636552
+          6563742E526967687405000000000000808D084011536F75726365526563742E
+          426F74746F6D0500000000000000BC07400000064F706171756509000A545265
+          6374616E676C6500095374796C654E616D65060A6261636B67726F756E640541
+          6C69676E0708436F6E74656E74730946696C6C2E4B696E6407044E6F6E65064C
+          6F636B6564090748697454657374080C4D617267696E732E4C65667405000000
+          0000000080FF3F0B4D617267696E732E546F70050000000000000080FF3F0D4D
+          617267696E732E5269676874050000000000000080FF3F0E4D617267696E732E
+          426F74746F6D050000000000000080FF3F0A53697A652E576964746805000000
+          00000000CF06400B53697A652E48656967687405000000000000009002401453
+          697A652E506C6174666F726D44656661756C74080B5374726F6B652E4B696E64
+          07044E6F6E650000000C545374796C654F626A65637400095374796C654E616D
+          65060676747261636B05416C69676E070A486F727A43656E746572074361704D
+          6F6465070454696C65064C6F636B6564090C536F757263654C6F6F6B7570061B
+          57696E646F7773203130204465736B746F707374796C652E706E670A506F7369
+          74696F6E2E580500000000000000C605400A53697A652E576964746805000000
+          00000000B002400B53697A652E48656967687405000000000000009803401453
+          697A652E506C6174666F726D44656661756C74080A536F757263654C696E6B0E
+          010D436170496E736574732E546F70050000000000000080004010436170496E
+          736574732E426F74746F6D05000000000000008000400F536F75726365526563
+          742E4C65667405000000000000808F07400E536F75726365526563742E546F70
+          0500000000000000B2064010536F75726365526563742E526967687405000000
+          0000000095074011536F75726365526563742E426F74746F6D05000000000000
+          00EC064000010D436170496E736574732E546F700500000000000000C0004010
+          436170496E736574732E426F74746F6D0500000000000000C00040055363616C
+          650500000000000000C0FF3F0F536F75726365526563742E4C65667405000000
+          00000000D707400E536F75726365526563742E546F7005000000000000808507
+          4010536F75726365526563742E52696768740500000000000000DF074011536F
+          75726365526563742E426F74746F6D0500000000000000B1074000010D436170
+          496E736574732E546F70050000000000000080014010436170496E736574732E
+          426F74746F6D0500000000000000800140055363616C65050000000000000080
+          00400F536F75726365526563742E4C65667405000000000000808F08400E536F
+          75726365526563742E546F700500000000000000B2074010536F757263655265
+          63742E5269676874050000000000000095084011536F75726365526563742E42
+          6F74746F6D0500000000000000EC07400000064F706171756509000A54526563
+          74616E676C6500095374796C654E616D65060A6261636B67726F756E6405416C
+          69676E0708436F6E74656E74730946696C6C2E4B696E6407044E6F6E65064C6F
+          636B6564090748697454657374080C4D617267696E732E4C6566740500000000
+          00000080FF3F0B4D617267696E732E546F70050000000000000080FF3F0D4D61
+          7267696E732E5269676874050000000000000080FF3F0E4D617267696E732E42
+          6F74746F6D050000000000000080FF3F0A53697A652E57696474680500000000
+          0000009002400B53697A652E4865696768740500000000000000880340145369
+          7A652E506C6174666F726D44656661756C74080B5374726F6B652E4B696E6407
+          044E6F6E6500000006545468756D6200095374796C654E616D65060676746875
+          6D62064C6F636B6564090C4D617267696E732E4C656674050000000000000080
+          00C00B4D617267696E732E546F7005000000000000008000C00D4D617267696E
+          732E526967687405000000000000008000C00E4D617267696E732E426F74746F
+          6D05000000000000008000C00A506F736974696F6E2E580500000000000000B0
+          04C00A506F736974696F6E2E5905000000000000009205C00B5374796C654C6F
+          6F6B75700612747261636B6261725F7374796C652E706E67000006545468756D
+          6200095374796C654E616D650606687468756D62064C6F636B6564090C4D6172
+          67696E732E4C65667405000000000000008000C00B4D617267696E732E546F70
+          05000000000000008000C00D4D617267696E732E526967687405000000000000
+          008000C00E4D617267696E732E426F74746F6D05000000000000008000C00A50
+          6F736974696F6E2E580500000000000000FC04400A506F736974696F6E2E5905
+          000000000000009005C00A53697A652E57696474680500000000000000AC0440
+          0B53697A652E4865696768740500000000000000B404401453697A652E506C61
+          74666F726D44656661756C74080B5374796C654C6F6F6B75700612747261636B
+          6261725F7374796C652E706E67000000545046301254427574746F6E5374796C
+          654F626A65637400095374796C654E616D65062B7261636B4261724368616E67
+          65446966666963756C745374796C6531767468756D626261727374796C65310C
+          536F757263654C6F6F6B7570061B57696E646F7773203130204465736B746F70
+          7374796C652E706E670A53697A652E57696474680500000000000000D106400B
+          53697A652E48656967687405000000000000009803401453697A652E506C6174
+          666F726D44656661756C740808577261704D6F6465070643656E746572075669
+          7369626C650807486F744C696E6B0E010F536F75726365526563742E4C656674
+          0500000000000000E106400E536F75726365526563742E546F70050000000000
+          0000CB064010536F75726365526563742E52696768740500000000000000F406
+          4011536F75726365526563742E426F74746F6D0500000000000000D306400001
+          055363616C650500000000000000C0FF3F0F536F75726365526563742E4C6566
+          740500000000000000A907400E536F75726365526563742E546F700500000000
+          00000098074010536F75726365526563742E52696768740500000000000000B7
+          074011536F75726365526563742E426F74746F6D05000000000000009E074000
+          01055363616C6505000000000000008000400F536F75726365526563742E4C65
+          66740500000000000000E107400E536F75726365526563742E546F7005000000
+          00000000CB074010536F75726365526563742E52696768740500000000000000
+          F4074011536F75726365526563742E426F74746F6D0500000000000000D30740
+          00000B466F63757365644C696E6B0E010F536F75726365526563742E4C656674
+          0500000000000000C406400E536F75726365526563742E546F70050000000000
+          0000B9064010536F75726365526563742E52696768740500000000000000D906
+          4011536F75726365526563742E426F74746F6D0500000000000000C406400001
+          055363616C650500000000000000C0FF3F0F536F75726365526563742E4C6566
+          740500000000000000A907400E536F75726365526563742E546F700500000000
+          0000008F074010536F75726365526563742E52696768740500000000000000B7
+          074011536F75726365526563742E426F74746F6D050000000000000095074000
+          01055363616C6505000000000000008000400F536F75726365526563742E4C65
+          66740500000000000000E107400E536F75726365526563742E546F7005000000
+          00000000BF074010536F75726365526563742E52696768740500000000000000
+          F4074011536F75726365526563742E426F74746F6D0500000000000000C70740
+          00000A4E6F726D616C4C696E6B0E010F536F75726365526563742E4C65667405
+          00000000000000E106400E536F75726365526563742E546F7005000000000000
+          00BF064010536F75726365526563742E52696768740500000000000000F40640
+          11536F75726365526563742E426F74746F6D0500000000000000C70640000105
+          5363616C650500000000000000C0FF3F0F536F75726365526563742E4C656674
+          0500000000000000A907400E536F75726365526563742E546F70050000000000
+          00008F074010536F75726365526563742E52696768740500000000000000B707
+          4011536F75726365526563742E426F74746F6D05000000000000009507400001
+          055363616C6505000000000000008000400F536F75726365526563742E4C6566
+          740500000000000000E107400E536F75726365526563742E546F700500000000
+          000000BF074010536F75726365526563742E52696768740500000000000000F4
+          074011536F75726365526563742E426F74746F6D0500000000000000C7074000
+          000B507265737365644C696E6B0E010F536F75726365526563742E4C65667405
+          00000000000000E106400E536F75726365526563742E546F7005000000000000
+          00D7064010536F75726365526563742E52696768740500000000000000F40640
+          11536F75726365526563742E426F74746F6D0500000000000000DF0640000105
+          5363616C650500000000000000C0FF3F0F536F75726365526563742E4C656674
+          0500000000000000A907400E536F75726365526563742E546F70050000000000
+          0000A1074010536F75726365526563742E52696768740500000000000000B707
+          4011536F75726365526563742E426F74746F6D0500000000000000A707400001
+          055363616C6505000000000000008000400F536F75726365526563742E4C6566
+          740500000000000000E107400E536F75726365526563742E546F700500000000
+          000000D7074010536F75726365526563742E52696768740500000000000000F4
+          074011536F75726365526563742E426F74746F6D0500000000000000DF074000
+          0013546F756368416E696D6174696F6E2E4C696E6B0E00064F70617175650900
+          00545046301254427574746F6E5374796C654F626A65637400095374796C654E
+          616D65062B7261636B4261724368616E6765446966666963756C745374796C65
+          31687468756D626261727374796C65310C536F757263654C6F6F6B7570061B57
+          696E646F7773203130204465736B746F707374796C652E706E670A53697A652E
+          57696474680500000000000000D106400B53697A652E48656967687405000000
+          000000009803401453697A652E506C6174666F726D44656661756C7408085772
+          61704D6F6465070643656E7465720756697369626C650807486F744C696E6B0E
+          010F536F75726365526563742E4C65667405000000000000808107400E536F75
+          726365526563742E546F700500000000000000BF064010536F75726365526563
+          742E5269676874050000000000008085074011536F75726365526563742E426F
+          74746F6D0500000000000000D206400001055363616C650500000000000000C0
+          FF3F0F536F75726365526563742E4C6566740500000000000000C207400E536F
+          75726365526563742E546F7005000000000000008F074010536F757263655265
+          63742E52696768740500000000000000C8074011536F75726365526563742E42
+          6F74746F6D05000000000000009D07400001055363616C650500000000000000
+          8000400F536F75726365526563742E4C65667405000000000000808108400E53
+          6F75726365526563742E546F700500000000000000BF074010536F7572636552
+          6563742E5269676874050000000000008085084011536F75726365526563742E
+          426F74746F6D0500000000000000D2074000000B466F63757365644C696E6B0E
+          010F536F75726365526563742E4C6566740500000000000000B605400E536F75
+          726365526563742E546F700500000000000000F2054010536F75726365526563
+          742E52696768740500000000000000CC054011536F75726365526563742E426F
+          74746F6D05000000000000008E06400001055363616C650500000000000000C0
+          FF3F0F536F75726365526563742E4C6566740500000000000000B907400E536F
+          75726365526563742E546F7005000000000000008F074010536F757263655265
+          63742E52696768740500000000000000BF074011536F75726365526563742E42
+          6F74746F6D05000000000000009D07400001055363616C650500000000000000
+          8000400F536F75726365526563742E4C6566740500000000000000F707400E53
+          6F75726365526563742E546F700500000000000000BF074010536F7572636552
+          6563742E52696768740500000000000000FF074011536F75726365526563742E
+          426F74746F6D0500000000000000D2074000000A4E6F726D616C4C696E6B0E01
+          0F536F75726365526563742E4C6566740500000000000000F706400E536F7572
+          6365526563742E546F700500000000000000BF064010536F7572636552656374
+          2E52696768740500000000000000FF064011536F75726365526563742E426F74
+          746F6D0500000000000000D206400001055363616C650500000000000000C0FF
+          3F0F536F75726365526563742E4C6566740500000000000000B907400E536F75
+          726365526563742E546F7005000000000000008F074010536F75726365526563
+          742E52696768740500000000000000BF074011536F75726365526563742E426F
+          74746F6D05000000000000009D07400001055363616C65050000000000000080
+          00400F536F75726365526563742E4C6566740500000000000000F707400E536F
+          75726365526563742E546F700500000000000000BF074010536F757263655265
+          63742E52696768740500000000000000FF074011536F75726365526563742E42
+          6F74746F6D0500000000000000D2074000000B507265737365644C696E6B0E01
+          0F536F75726365526563742E4C65667405000000000000808707400E536F7572
+          6365526563742E546F700500000000000000BF064010536F7572636552656374
+          2E526967687405000000000000808B074011536F75726365526563742E426F74
+          746F6D0500000000000000D206400001055363616C650500000000000000C0FF
+          3F0F536F75726365526563742E4C6566740500000000000000CB07400E536F75
+          726365526563742E546F7005000000000000008F074010536F75726365526563
+          742E52696768740500000000000000D1074011536F75726365526563742E426F
+          74746F6D05000000000000009D07400001055363616C65050000000000000080
+          00400F536F75726365526563742E4C65667405000000000000808708400E536F
+          75726365526563742E546F700500000000000000BF074010536F757263655265
+          63742E526967687405000000000000808B084011536F75726365526563742E42
+          6F74746F6D0500000000000000D20740000013546F756368416E696D6174696F
+          6E2E4C696E6B0E00064F70617175650900005450463007544C61796F75740009
+          5374796C654E616D65060F436865636B426F78315374796C653105416C69676E
+          070643656E7465720A53697A652E57696474680500000000000000D106400B53
+          697A652E4865696768740500000000000000C404401453697A652E506C617466
+          6F726D44656661756C74080756697369626C6508085461624F72646572021200
+          07544C61796F75740005416C69676E07044C6566740A53697A652E5769647468
+          05000000000000009003400B53697A652E4865696768740500000000000000C4
+          04401453697A652E506C6174666F726D44656661756C7408001154436865636B
+          5374796C654F626A65637400095374796C654E616D65060A6261636B67726F75
+          6E6405416C69676E070643656E746572074361704D6F6465070454696C65064C
+          6F636B6564090C536F757263654C6F6F6B7570061B57696E646F777320313020
+          4465736B746F707374796C652E706E670A53697A652E57696474680500000000
+          000000D002400B53697A652E4865696768740500000000000000D00240145369
+          7A652E506C6174666F726D44656661756C740808577261704D6F646507064365
+          6E7465720D416374697665547269676765720707436865636B65640A41637469
+          76654C696E6B0E010F536F75726365526563742E4C6566740500000000000000
+          F803400E536F75726365526563742E546F70050000000000000092064010536F
+          75726365526563742E52696768740500000000000000B0044011536F75726365
+          526563742E426F74746F6D05000000000000009F06400001055363616C650500
+          000000000000C0FF3F0F536F75726365526563742E4C65667405000000000000
+          00B804400E536F75726365526563742E546F700500000000000000DB06401053
+          6F75726365526563742E5269676874050000000000000082054011536F757263
+          65526563742E426F74746F6D0500000000000000EE06400001055363616C6505
+          000000000000008000400F536F75726365526563742E4C656674050000000000
+          0000F804400E536F75726365526563742E546F70050000000000000092074010
+          536F75726365526563742E52696768740500000000000000B0054011536F7572
+          6365526563742E426F74746F6D05000000000000009F074000000A536F757263
+          654C696E6B0E010F536F75726365526563742E4C6566740500000000000000C0
+          00400E536F75726365526563742E546F70050000000000000092064010536F75
+          726365526563742E5269676874050000000000000080034011536F7572636552
+          6563742E426F74746F6D05000000000000009F06400001055363616C65050000
+          0000000000C0FF3F0F536F75726365526563742E4C6566740500000000000000
+          8001400E536F75726365526563742E546F700500000000000000DB064010536F
+          75726365526563742E52696768740500000000000000B8034011536F75726365
+          526563742E426F74746F6D0500000000000000EE06400001055363616C650500
+          0000000000008000400F536F75726365526563742E4C65667405000000000000
+          00C001400E536F75726365526563742E546F7005000000000000009207401053
+          6F75726365526563742E5269676874050000000000000080044011536F757263
+          65526563742E426F74746F6D05000000000000009F0740000007486F744C696E
+          6B0E010F536F75726365526563742E4C65667405000000000000008803400E53
+          6F75726365526563742E546F70050000000000000092064010536F7572636552
+          6563742E52696768740500000000000000F0034011536F75726365526563742E
+          426F74746F6D05000000000000009F06400001055363616C6505000000000000
+          00C0FF3F0F536F75726365526563742E4C6566740500000000000000C803400E
+          536F75726365526563742E546F700500000000000000DB064010536F75726365
+          526563742E52696768740500000000000000B0044011536F7572636552656374
+          2E426F74746F6D0500000000000000EE06400001055363616C65050000000000
+          00008000400F536F75726365526563742E4C6566740500000000000000880440
+          0E536F75726365526563742E546F70050000000000000092074010536F757263
+          65526563742E52696768740500000000000000F0044011536F75726365526563
+          742E426F74746F6D05000000000000009F074000000D416374697665486F744C
+          696E6B0E010F536F75726365526563742E4C6566740500000000000000B40440
+          0E536F75726365526563742E546F70050000000000000092064010536F757263
+          65526563742E52696768740500000000000000E8044011536F75726365526563
+          742E426F74746F6D05000000000000009F06400001055363616C650500000000
+          000000C0FF3F0F536F75726365526563742E4C65667405000000000000008605
+          400E536F75726365526563742E546F700500000000000000DB064010536F7572
+          6365526563742E52696768740500000000000000AC054011536F757263655265
+          63742E426F74746F6D0500000000000000EE06400001055363616C6505000000
+          000000008000400F536F75726365526563742E4C6566740500000000000000B4
+          05400E536F75726365526563742E546F70050000000000000092074010536F75
+          726365526563742E52696768740500000000000000E8054011536F7572636552
+          6563742E426F74746F6D05000000000000009F074000000B466F63757365644C
+          696E6B0E010F536F75726365526563742E4C6566740500000000000000880340
+          0E536F75726365526563742E546F70050000000000000092064010536F757263
+          65526563742E52696768740500000000000000F0034011536F75726365526563
+          742E426F74746F6D05000000000000009F06400001055363616C650500000000
+          000000C0FF3F0F536F75726365526563742E4C6566740500000000000000C803
+          400E536F75726365526563742E546F700500000000000000DB064010536F7572
+          6365526563742E52696768740500000000000000B0044011536F757263655265
+          63742E426F74746F6D0500000000000000EE06400001055363616C6505000000
+          000000008000400F536F75726365526563742E4C656674050000000000000088
+          04400E536F75726365526563742E546F70050000000000000092074010536F75
+          726365526563742E52696768740500000000000000F0044011536F7572636552
+          6563742E426F74746F6D05000000000000009F0740000011416374697665466F
+          63757365644C696E6B0E010F536F75726365526563742E4C6566740500000000
+          000000B404400E536F75726365526563742E546F700500000000000000920640
+          10536F75726365526563742E52696768740500000000000000E8044011536F75
+          726365526563742E426F74746F6D05000000000000009F06400001055363616C
+          650500000000000000C0FF3F0F536F75726365526563742E4C65667405000000
+          000000008605400E536F75726365526563742E546F700500000000000000DB06
+          4010536F75726365526563742E52696768740500000000000000AC054011536F
+          75726365526563742E426F74746F6D0500000000000000EE0640000105536361
+          6C6505000000000000008000400F536F75726365526563742E4C656674050000
+          0000000000B405400E536F75726365526563742E546F70050000000000000092
+          074010536F75726365526563742E52696768740500000000000000E805401153
+          6F75726365526563742E426F74746F6D05000000000000009F07400000000000
+          1654427574746F6E5374796C65546578744F626A65637400095374796C654E61
+          6D6506047465787405416C69676E0706436C69656E74064C6F636B6564090C4D
+          617267696E732E4C6566740500000000000000C000400A53697A652E57696474
+          680500000000000000BC06400B53697A652E4865696768740500000000000000
+          C404401453697A652E506C6174666F726D44656661756C740804546578740604
+          546578740D536861646F7756697369626C650808486F74436F6C6F720708636C
+          61426C61636B0C466F6375736564436F6C6F720708636C61426C61636B0B4E6F
+          726D616C436F6C6F720708636C61426C61636B0C50726573736564436F6C6F72
+          0708636C61426C61636B0000005450463007544C61796F757400095374796C65
+          4E616D6506134D6F6465726E436865636B426F785374796C6505416C69676E07
+          0643656E7465720A53697A652E57696474680500000000000000E205400B5369
+          7A652E48656967687405000000000000008404401453697A652E506C6174666F
+          726D44656661756C7408085461624F72646572025B000A5452656374616E676C
+          6500095374796C654E616D65060A6261636B67726F756E6405416C69676E0708
+          436F6E74656E74730946696C6C2E4B696E6407044E6F6E65064C6F636B656409
+          0748697454657374080A53697A652E57696474680500000000000000E205400B
+          53697A652E48656967687405000000000000008404401453697A652E506C6174
+          666F726D44656661756C74080B5374726F6B652E4B696E6407044E6F6E650010
+          54496E6E6572476C6F774566666563740008536F66746E657373050000000000
+          CDCCCCFD3F09476C6F77436F6C6F720709784646344634383438074F70616369
+          74790500000000006666E6FE3F0754726967676572060E497350726573736564
+          3D7472756507456E61626C6564080000000654476C79706800095374796C654E
+          616D65060A676C7970687374796C650C4D617267696E732E4C65667405000000
+          000000008000400B4D617267696E732E546F7005000000000000008001400D4D
+          617267696E732E526967687405000000000000008000400E4D617267696E732E
+          426F74746F6D050000000000000080004005416C69676E0706436C69656E740A
+          53697A652E576964746805000000000000008004400B53697A652E4865696768
+          7405000000000000008404401453697A652E506C6174666F726D44656661756C
+          7408000005545465787400095374796C654E616D6506047465787405416C6967
+          6E0706436C69656E74064C6F636B6564090748697454657374080C4D61726769
+          6E732E4C6566740500000000000000A001400B4D617267696E732E546F700500
+          0000000000008000400D4D617267696E732E52696768740500000000000000A0
+          01400E4D617267696E732E426F74746F6D05000000000000008000400A53697A
+          652E57696474680500000000000000CE05400B53697A652E4865696768740500
+          000000000000E803401453697A652E506C6174666F726D44656661756C740804
+          54657874060454657874155465787453657474696E67732E576F726457726170
+          080756697369626C6508000000}
+      end>
+    Left = 144
+    Top = 32
+  end
+  object Lang: TLang
+    AutoSelect = False
+    Lang = 'en'
+    Left = 456
+    Top = 40
+    ResourcesBin = {
+      A70100004D00610069006E004D0065006E0075000D000A004E00650077002000
+      670061006D0065000D000A004D006F006400650072006E002000730075006400
+      6F006B0075000D000A0043006F006E00740069006E00750065000D000A005300
+      7400610074006900730074006900630073000D000A0053006500740074006900
+      6E00670073000D000A0045007800690074000D000A00410062006F0075007400
+      0D000A004800690064006500200049006D0070006F0073007300690062006C00
+      65002000560061006C007500650073000D000A0049006E00470061006D006500
+      0D000A004D0065006400690075006D000D000A00530074006100740073000D00
+      0A0043006F006D006D006F006E000D000A0045006100730079000D000A004800
+      6100720064000D000A004500780070006500720074000D000A00440069006600
+      66006900630075006C0074000D000A0053006F006C007600650064003A000D00
+      0A0055006E0073006F006C007600650064003A000D000A004200650073007400
+      2000740069006D0065003A000D000A0057006F00720073007400200074006900
+      6D0065003A000D000A0041007600650072006100670065002000740069006D00
+      65003A000D000A00530074006100720074000D000A0043007500720072006500
+      6E007400200064006900660066006900630075006C0074000D000A0050006100
+      75007300650064000D000A0052006500730075006D0065000D000A0045006E00
+      6400470061006D0065000D000A004D00610069006E0020006D0065006E007500
+      0D000A0053006F006C0076006500640021000D000A005300750064006F006B00
+      75002000670061006D0065000D000A00560065007200730069006F006E002000
+      30002E0039000D000A0053006F0075007200630065000D000A00540069006D00
+      650020007300700065006E0074003A000D000A0048006900670068006C006900
+      670068007400200063006F006C0075006D006E0073002C00200072006F007700
+      7300200061006E006400200073007100750061007200650073000D000A005300
+      68006F0077002000740069006D00650072000D000A0048006900670068006C00
+      690067006800740020006900640065006E0074006900630061006C0020006E00
+      75006D00620065007200730073000D000A000200000002000000720075008F02
+      000043006F006D006D006F006E003D001E0431044904350435040D000A004500
+      6100730079003D001B04350433043A043E040D000A0048006100720064003D00
+      22044F04360435043B043E040D000A004500780070006500720074003D002D04
+      3A0441043F043504400442040D000A0044006900660066006900630075006C00
+      74003D0021043B043E0436043D043E04410442044C040D000A0053006F006C00
+      7600650064003A003D0020043504480435043D043E043A000D000A0055006E00
+      73006F006C007600650064003A003D001D043504200040043504480435043D04
+      3E043A000D000A0042006500730074002000740069006D0065003A003D001B04
+      4304470448043504350420003204400435043C044F043A000D000A0057006F00
+      7200730074002000740069006D0065003A003D00250443043404480435043504
+      20003204400435043C044F043A000D000A004100760065007200610067006500
+      2000740069006D0065003A003D0021044004350434043D043504350420003204
+      400435043C044F040D000A0045007800690074003D0012044B0445043E043404
+      0D000A00410062006F00750074003D001E043104200038043304400435040D00
+      0A00530065007400740069006E00670073003D001D0430044104420440043E04
+      39043A0438040D000A0053007400610074006900730074006900630073003D00
+      210442043004420438044104420438043A0430040D000A004E00650077002000
+      670061006D0065003D001D043E04320430044F04200038043304400430040D00
+      0A0043006F006E00740069006E00750065003D001F0440043E0434043E043B04
+      3604380442044C040D000A004800690064006500200049006D0070006F007300
+      7300690062006C0065002000560061006C007500650073003D0021043A044004
+      4B043204300442044C0420003D04350432043E0437043C043E0436043D044B04
+      350420004704380441043B0430040D000A004D0065006400690075006D003D00
+      21044004350434043D044F044F040D000A005000610075007300650064003D00
+      1F0430044304370430040D000A0052006500730075006D0065003D001F044004
+      3E0434043E043B043604380442044C040D000A004D00610069006E0020006D00
+      65006E0075003D0013043B04300432043D043E04350420003C0435043D044E04
+      0D000A0053006F006C0076006500640021003D0020043504480435043D043E04
+      21000D000A00530074006100720074003D001D0430044704300442044C040D00
+      0A00540069006D00650020007300700065006E0074003A003D00200435044804
+      35043D043E042000370430043A000D000A0048006900670068006C0069006700
+      68007400200063006F006C0075006D006E0073002C00200072006F0077007300
+      200061006E006400200073007100750061007200650073003D001F043E043404
+      410432043504470438043204300442044C042000410442043E043B0431044604
+      4B042C0020004104420440043E043A0438042000380420003A04320430043404
+      4004300442044B040D000A00530068006F0077002000740069006D0065007200
+      3D001F043E043A04300437044B043204300442044C0420004204300439043C04
+      350440040D000A0048006900670068006C006900670068007400200069006400
+      65006E0074006900630061006C0020006E0075006D0062006500720073007300
+      3D001F043E043404410432043504470438043204300442044C0420003E043404
+      38043D0430043A043E0432044B04350420004704380441043B0430040D000A00
+      0200000065006E00E00100004E00650077002000670061006D0065003D004E00
+      650077002000670061006D0065000D000A0043006F006E00740069006E007500
+      65003D0043006F006E00740069006E00750065000D000A005300740061007400
+      6900730074006900630073003D00530074006100740069007300740069006300
+      73000D000A00530065007400740069006E00670073003D005300650074007400
+      69006E00670073000D000A0045007800690074003D0045007800690074000D00
+      0A00410062006F00750074003D00410062006F00750074000D000A0048006900
+      64006500200049006D0070006F0073007300690062006C006500200056006100
+      6C007500650073003D004800690064006500200069006D0070006F0073007300
+      690062006C0065002000760061006C007500650073000D000A004D0065006400
+      690075006D003D004D0065006400690075006D000D000A005300740061007200
+      74003D00530074006100720074000D000A00430075007200720065006E007400
+      200064006900660066006900630075006C0074003D0043007500720072006500
+      6E007400200064006900660066006900630075006C0074000D000A0050006100
+      75007300650064003D005000610075007300650064000D000A00520065007300
+      75006D0065003D0052006500730075006D0065000D000A004D00610069006E00
+      20006D0065006E0075003D004D00610069006E0020006D0065006E0075000D00
+      0A0053006F006C0076006500640021003D0053006F006C007600650064002100
+      0D000A00530068006F0077002000740069006D00650072003D00530068006F00
+      77002000740069006D00650072000D000A004200650073007400200074006900
+      6D0065003A003D0042006500730074002000740069006D0065003A000D000A00
+      57006F007200730074002000740069006D0065003A003D0057006F0072007300
+      74002000740069006D0065003A000D000A004100760065007200610067006500
+      2000740069006D0065003A003D00410076006500720061006700650020007400
+      69006D0065003A000D000A0045006100730079003D0045006100730079000D00
+      0A0048006100720064003D0048006100720064000D000A004500780070006500
+      720074003D004500780070006500720074000D000A0044006900660066006900
+      630075006C0074003D0044006900660066006900630075006C0074000D000A00
+      53006F006C007600650064003A003D0053006F006C007600650064003A000D00
+      0A0055006E0073006F006C007600650064003A003D0055006E0073006F006C00
+      7600650064003A000D000A00}
+  end
+  object ImageList: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 44
+        MultiResBitmap.Width = 44
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 44
+            Height = 44
+            PNG = {
+              89504E470D0A1A0A0000000D494844520000002C0000002C08060000001E845A
+              01000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              00A7494441545847EDCEC10DC2300C85E1044FD19198A31C334EAECCC144882E
+              9184BA4A0FDCDC580F54F13E09D92AB2F20722FAAED8E72129A56B6BEDAE7B8C
+              71CE393FB63F0C3CB7EAD2E721FAA0884CFADB1FB7F2DCAAA1607DACAF1FBB85
+              E7560D05FF1283D1188CC6603406A331188DC1680C4663301A83D1188CC66034
+              06A331188DC168FF115C4A79F5552D7D9A786ED550B088DCD6B1D45A9FEB9CB7
+              8F469E5BA2F30BE10DA8663478AFF621D20000000049454E44AE426082}
+            FileName = 'D:\Programming\Games\Sudoku\icons\pause.png'
+          end>
+        Name = 'pause'
+      end
+      item
+        MultiResBitmap.Height = 40
+        MultiResBitmap.Width = 40
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 40
+            Height = 40
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000280000002808060000008CFEB8
+              6D000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02D5494441545847ED984B68134118C727D9241243F1E44DA51E04115ABCE4E5
+              6151F1D4F6524F152F52825AF3226840110D22E8C518F2C017ADB71EA4A8178B
+              37F1206A82A088176F42C1B7D04B94BCFDCFCE97908B30BB3BAB45F283E59BEF
+              BFA1FCF966BE99D9B21123466C1072B99C8F86A6D0283A4A3C1E9F68369BC148
+              24E2AF56AB9F4996C24DD1311289C4B4DBED5EED743A97BBDDEE2992A571D460
+              2A953A09738F5C2ED776C449C4CDF44A1AC70C2693C9AB083745C6182AF80106
+              AF512A8D8BA232B2D9EC58A3D1B88DE111A13086A97DA6695AAC582CBE27491A
+              A54D82F5B61B6656309C128AC1B2CFE79B2B140A9F283785B20AC2DC21985BF2
+              783C3B4862BD5EEF4AB95C3E4FA9259418C47A9BC7FABA85A15728060BA55289
+              6BB6B0DD24E8D44B30B78461DFDC4754724A85398EE50AA26A9BA86AC7846234
+              4315DB490CE6DE91641B4B06B1DE76C2C82286078562ACB7FBDC1C3A759D2425
+              9836984EA7F556ABB58866D84512E73AAA769AC64A913698C964FCD86CE730AC
+              E0199C0898D674A5522951AA1CE92681B9E30877F1F4CD7DC373D849731C335D
+              3C4B91D5EBF55FBC7298D687243986198303338140C08F8628628B1998760A69
+              83384BEF20CCE3F969088C6DC5F3001D9D12A933FC3F5D3CCCDFDC072DDD666A
+              B5DA7A2814BA8793641BD2BD5CC3780F1AE700AEF52F71ADFFCA351558AAE030
+              FC2C46B82832037E16C7B0FD3CA6DC16B6EF83A8D65354730D15E47740FEF7C6
+              303E1A0E87BFE0DD2BE34736507261C594BF0E06832FB099EFC73ADC42F20C8C
+              FBF0EE09E596B03DC5C3F01B350CF2ABD73EA1182C7BBDDE13F97CBE4EB92994
+              5EF951ADEFBAAEAFA092E3482784CA26DBEDB61E8D469F63CA7F90268DD20A0E
+              C3BFEAB016CF526A7CD561EF9CC536F48624296CDFA8FF04BE45CE212C880C53
+              A569E3D82BCF502A8D630639FCDA8F2D6706C6D610DF22F68F49691C35C8C17E
+              B80A73D3A8E00534D00D92371E56FFBB3562C4BF85B1DF01D604C5AE2985D400
+              00000049454E44AE426082}
+            FileName = 'D:\Programming\Games\Sudoku\icons\back.png'
+          end>
+        Name = 'back'
+      end
+      item
+        MultiResBitmap.Height = 40
+        MultiResBitmap.Width = 40
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 40
+            Height = 40
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000280000002808060000008CFEB8
+              6D000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02CF494441545847ED984B68135114862733A4C106D18D1B4174238268299807
+              1183B8D3B620D595B8D3A255F200E3C6820414518812F2C0AA94E24E11311B0B
+              5D4811854212417025B85014175605415213F2F23F3347195C9879DCAB82F3C1
+              70EEF9278B9F73CEBD3313C5C3C34302D96C768897D2D1385A269D4E8F369BCD
+              5DA15068A85EAFAFB02C0D95A3657ABDDEE96EB77B5155D585442231CEB2346C
+              1BF4F97CC3303782B809F1612A959AE65B527062F02A2AF886536236994C5EE6
+              B5707C1C6D8139DC069373A8E01E96883B8140E0642E97FBCAB9106C6F12A25A
+              AD7E8EC7E3F7308F9B918E18AAB213A6F786C3E1E55AADF68935D738AAA019B4
+              F712DA3EC3A9D2E974DEA2B2C7CBE5F223965CE1A8826650ADA56834FA01CB09
+              CA616E1D0C1F894422EF71EF39696E706D9040CB9FA1B53518DB87742D2E0DEB
+              8330AEE2DE63FD470E71DD6233387276602E69F34459226EF7FBFDE952A9D4E2
+              DC16422AF803546B25168BDD87A1ADA8E0769647B1DE8D0A3F45CBBFB06619A1
+              1534836A5E43386364FAE679E5F7FBA70A85C213962C21CD208147610AED2E70
+              4AACE24A689A76379FCF7F33A4DF63FB4962071C35458443B83EEA82A20CE39A
+              C77979C2480723D520512C162BD838E946A361AED824C781483788599CA43607
+              83C1352C11158E03916A906610E101AE0DBA60CCE031CCE02D231DCCFFB78BF1
+              A6B39E0E6B9C7D87592296A04D61D3BCE6DC32425B4C4F12ECD0C55FCCD19364
+              CC8939425805316F07B019E6B0DC68283A17B08BB3BC76841083A81CBDF6CF1A
+              994E9B9FBFF39C3BC6758BE97D10E1A7397A1FC4BC8D89304738AE60269309B6
+              DBED9B581E35149D6598A397D5979CBBC65105E99BA4D56A2D62693647DF24FB
+              459A236C57903EDCD1C60A0EDB2D2C2998B72B68E9394E8562BB823073D66C0E
+              9C92658E7062701573F602F11DE2048E911B7C4B0AB60DE2ACBB8E0A9E87B971
+              CCDB02CBFF167FF2DF2D0F8FBF8BA27C07A3000EC74D7A03640000000049454E
+              44AE426082}
+            FileName = 'D:\Programming\Games\Sudoku\icons\next.png'
+          end>
+        Name = 'next'
+      end
+      item
+        MultiResBitmap.Height = 70
+        MultiResBitmap.Width = 70
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 70
+            Height = 70
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000046000000460806000000712EE2
+              84000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0AC449444154785EED9C7B7054571DC7C983421A494A688A99B6311581602A81
+              E649A0A252844E75D08ECC74EC58FE684D437984A09DCE38CE201DE50F102121
+              50C8D4526628A3CDF8605A2DD6BE3255D96C440CB5547954CB23244DC9039A84
+              84979FDFDEDF2E7B77CF4D76930DD99DC967E6CE39BFDF6EEE9EFB3DBF73EE39
+              E79E9B31A38C324A2488D334A658BD7AF5E4B8B8B8ACEBD7AFB75555551D5777
+              4489096156AE5C790F424C277B2F62E471CC4E4848984E7A223E3EFEE9CACACA
+              DF5BDF8C1C5129CC9A356B72AE5DBB369B0BBF8F632617FF05DC9FB33EB573E5
+              CA953644CADEB66D5BABBA22425408B36EDDBAF8F3E7CF3F46543C8210998832
+              393131314D3F1E10FE2607618EAA1911E2351D5110E50744C56E8459443A234C
+              5136A7A5A59D5033628C78C4AC5AB52A8508714B9FA1AE7E696C6CBC96939373
+              86EF1F449403D5D5D57B705FB73E8D1C231E31BDBDBD044ADC35354382A8BA95
+              BF19CF71BEB4B43445DD11252AFA186EBFE5245B2D2B6CDE46A01711AB76CB96
+              2D3DEA1B32099A8E28F550585878910B5CA42E7FBCCDC4A912EFE1F816CD71C6
+              9C39738E71AA66CB3D34A24218C1ED761F2C2A2A4A223BCFF2DC80E6D6499F72
+              F2F2E5CBC9A4B7A8DB1F348DFB22E92204EE9B356BD6D143870E5DB63E1A1C43
+              1666C58A1593B2B2B2FA8E1E3D3AE40E90DA7E037192C9CEB53C1EE2B84B2570
+              E18710653391D1415EA264BCF5B18D897CF610DFBF9DF33470BE2EF587CDA085
+              611096515050B089B6BD6BC28409251444C2F89C7E6C22A4FE6CF1E2C575972E
+              5D9A415622C08B94730AC769C62B65C5C5C57F237F0B83BB6C7EDF740DF91C9F
+              A769BDEB72B93EB55CE131286118A21792FC96DA799054C25F6EB505797979FB
+              1B1A1A0655102F757575577373735FA7D6BF8439CDF27A903B28FA17F5303FDA
+              979999B93F2525E530BEE99423C3F30D3B33AE5EBD3A63EEDCB9758873517D21
+              13B630328163FCF06B0A2305F72783DAFB1751D3A8F6A0A17FE8458037C9DEC7
+              21CDC69F85F4236DBB77EF76D12F1D2B29297985F248B3CAE548F47C43A18C53
+              F96C6A7E7EFEEB54585877ACB0C631CB962D93026C40805996C786444A93951D
+              3A44450B7DCA63648F599E1BD0CF94328DF088B075EBD67320B7FB6764DE24BE
+              00BEC9797EACF990092B62E6CF9FBF8AE4198EA0FE829A7982F6FF3B35238234
+              01A2E3EFD4FC02CC8996D733C03BBB71E3C6E7D41C231D3F915A4F9F72863BD7
+              3C84F88C7EE4A1B3B3339FB29F0A279A438E18FA9507F851A328F093E6E6E67D
+              9A8F2888ED42F432A2E114E6A744CB87A44F7B3E0C40FA1EFAA6EF53CE167579
+              484D4D95E8DACCF4E3AB96676042BA53C87C865A9368F89AE5B90185DE42E1D7
+              AA396C5086D99441D6601AF8BD93EA36C2771FE5BBCF930DBCA5BBFAFAFA96EC
+              DCB9F363B51D094918A26535E15BA9A60F0AB99942FE50CDA8829BC446125364
+              AD21B282AE2590019B12EA4F217C57AAE90351FE4CD86E5033EA20623650EE3F
+              AAE94F5979797996E61D09A58F5986005335EFE5637EF859266DA6BB40545059
+              59D94127FC53B28173A76C2AF571CD3BD2AF300CF7A731487A444D7F76138E7F
+              D17CD482380749F65A968DEFD0D432356FA45F61E8571618A2E52342F445CD47
+              3D44CD2E92FF5A960F899AAF6BDE88A33015151532D437FDF16FAAABABFFADF9
+              A887E62ECB9EA6A1C492D2D2D25B351F84A33044C52C9AD197D5F4D28ED2B59A
+              8F19E80F5F21B9605916F88A929292641A61C451180428A419D916A5F1B92F5C
+              B8F04F3563869E9E9E7F90BC6B593ED2A9FC22CD07E1248C8C6FF2ACEC0D50F9
+              AD3D7BF65C523366A8A9A991452B9994DAE07AF2E5D18D9A368CCEB56BD74E22
+              3A72D4F4D289C2A27CAC7284A3D3CAFAC86E6B6B9BA4791B46611836DF899A77
+              A9E9E5439A96CC536212E65A27A8ECC0A9C4DDDC79EFD4BC0D7318C5C7DF4D92
+              6A59169CF4447B7B7BC496156E36DCB69BA96CDB8339C4BA8DEB0A0C000F4661
+              3881AC888DB32C0B7C6763B17FF1C29CAE97E423CBB2A005DCA2D71A84511854
+              34B5BB0E4D6399A0254E862493356BC3280C043D3B46AC41AFB8470BDC3C8222
+              9E8899A0591B4E1113F4EC065F9F666316FA4ED335D8BA0C2F4E7D4CD0C32A7C
+              B685E618C574BD5734B5E1D494821E8110318EF38A1842E67F36A870E3A315A7
+              A6F489667D7002794218EBD816C905FA9D76CDDA706A4ACD9D9D9D812196CE11
+              D2526834B274E9D2042AFCB36A7AB92AD7AA791B4E4DE9546A6AAA2DC438E9D4
+              B2B232112726C9C8C8B81D11642F9F8FDEDE5ED961611CB41A856194D84488D9
+              94146118100DB8561AC5643266B109C375B632FA3DADA60DA3307CF91394B4CD
+              2B38C91DF80257F36289995C83AD2961FF273D3DDDB811C1288C0E9F0F59960F
+              796A19F203AB28A48423B08F3CB27EFD7AE3F8CCA98F115C1C22900F9AD702D9
+              8CAC66CC505151214DC856A95D5D5D3D740FB29DC488A330349BC308216B183E
+              08BD2C468FB2F523A6A06B902D6CB60A4D4E4E7E8FEB0B6C153E1C8591DD0688
+              73404D7FBEBB7CF972DF03F6684716BCB98EA56AFA205ADEDAB16387E37EBDFE
+              9A92CC2D5E4355DB60AFB1B171CED8B1631F5633EA494A4A7A9432DFAFA617D9
+              5EBFDFCA9AE95798A6A62637E2BCAAA687DCDCDC78C47A523610A92B6A91876A
+              DCA2574A99D5E5816879352D2DCDADA6917E85A9ADAD9591610D0321DB5A0C62
+              157072E3568C6882323E495967AAE9A51BFF3EEE46FD6EBAEE5718411E73D274
+              5E56D3477777F753D4C83235A30ECAB6B0AFAFEF29357D10ED7B5B5A5ADE56D3
+              9101855176709CB1B216F4EA32535D575E5EEEF86C66A46048914D13DA366EDC
+              B8DBD4E501DFFF88A09F4B4B509723216D3573BBDD2D050505D2AC1663FA0F92
+              265203D38A8B8BFF5A5F5F1F153B1FA45FA1A9BCC0D0C2F45CEC470C5EFFA466
+              BF841A3112822FF0832FA9E9831A90C7B895B28FC6F28C1C94E12ECAF8BC96C9
+              06FEBDF495F2A64A4884BC39B1A1A1A1AFA4A4A41181EE47F9C095F5A9F8F2F2
+              F3F38FF0BD1179C442A448195EE2F88ABAFC7111414F6CDFBEDDB8F66222AC5D
+              9B2E97ABBDB0B0F003DAEA026AC5F6DC0932F12DA059B5D0ACDE57DF4D813E45
+              46E3BF94CAB13C372052DEA75C8F731309EB65AF412D3C11B24B889CE7A885A0
+              67328876117F3585D9267B70D53D2C487F4222779E520ED368FC18C294D1AF0C
+              78170A64D02B7214EA1BCC41B62726263AED4C7253A85DE3C78FAFDDB46953D8
+              5BD6FB838A4941787915A79C2891DDE341F0DB1221B2F7B8CEF284C790962A09
+              E1B914F01764E5DD022314F01D8E5F31167A5337F10C963866C95388C88710E4
+              617E5786F94EE53F8C60CB693EF56A87CD90841164072417FE2CD9EF591E3344
+              D771A2EB0DB20D7CFF032EEE389DA1DCE28DAFF3C8F68CD6D6D63B64468F792F
+              172AE3257997295B3EEF879739F7BAA1EEFA1AB230826C4BA326653B7D0547E0
+              82732022C439C49177044E71C16DE4BB492F7141D78904D9B42C4F24E431B188
+              22CB05C607EFFE708ED39C6323C75ED9B1A9EE41131161BCD0F64B28602917F7
+              6DCC617989D380CC7DE44DFD9FD19F44ECDDEB880AE385BEE7016AAE546EEB34
+              9F90DFA10E13D9C8F41ABFB38F99F21F069A1486CBB00823C802515252522185
+              7F90C22FC4256FAC199F1387C165CE27E3927738E7818E8E8EBAE1DA9A326CC2
+              F82343752EA480EC3CC23E87BCF41BB29E234F069D069932D19347C5B2507692
+              BF7B8FD4CDDFBAAAAAAAE44D9461E5A608E38F4412CD2B9DDBB7FC138B0C9A9B
+              FCCB13990527934A797A888AF3A4AD984D7CF76C575757534D4D4D37BE514619
+              25961833E6FFB651165405075B0D0000000049454E44AE426082}
+            FileName = 'D:\Programming\Games\Sudoku\icons\undo.png'
+          end>
+        Name = 'undo'
+      end
+      item
+        MultiResBitmap.Height = 70
+        MultiResBitmap.Width = 70
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 70
+            Height = 70
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000046000000460806000000712EE2
+              84000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              07F549444154785EED9B7B685B551CC7FB489A38255D9F58AC88321144B68AE2
+              36064E2D0A8A8AA01B82E870765DDBF59176B5B84D572A53116D6BDBACD63275
+              9B6F23BE5006636E8E311DB221ED1FB2A1E2DB5AB7F5E1346BF368FDFC724F6A
+              D2B4D29B26EDBD251F38DCF3FB9DDCE49EEF3DE7771EF72625499224F120551D
+              1714555555368BC592EB70384E37353579955B170B4D985444B99363716A6A6A
+              EEF8F8F89708F44A6B6BEB79AD78E62C286110E5010ECF20CAA51CC74952BF8D
+              595959BB683963E4674C9A3A9A9E9A9A9A95636363CF295184D04DDF303434E4
+              50F919B32084A9AEAEBE866ED3919E9E5EA05CE1D8BC5EAFEE9E617A61366DDA
+              94C3C145BA2EE888E693FCFCFC7F547EC6983AC69496962EB2D96CBBE93E6B94
+              6B32EFF9FDFEAACECECE3F943D634CDB62D6AC59936EB7DB9BFE4794638140A0
+              26165104D30A535050E0ECE9E9A9536604C49BEF08C4F53B77EEFC5DB97463CA
+              AEC4B0BCD6E7F3BD92919171A17285731651D6BA5CAE83CA8E09D3B51846A05B
+              E93E9DD388E2A1B534CE5614C154C2305729A2353C4F5646A22810E589ECECEC
+              9794392B4CD39510E52A44E9A2B5DCA45C93D9D5D7D757E676BB03CA9E15A668
+              3115151517D11AB6FD8F286F8D8C8CD4C74B14C1F0C2C8048E19ED9364D76A9E
+              280E911EEBEEEE1ED6CCF86068611A1B1BD36825EB49E59836CD1BC1715AD2E6
+              F6F6F69F951D370C2DCCC0C0C07AE24A2559BBE689E007047BB4A3A3E36B65C7
+              15C3065F199611E5CDB4B4B45CE59A80394CBFD56A2DA7A57CA05C71C7902D06
+              516441F8F454A2C0DF168BA52991A2088613C6E974CAD64127E9FAA06312B4A2
+              67E93E5DCA4C18861286A9BE838ABF40F606CD13C56EBA503347D99D4B288611
+              468D4052E9E986E5F7592DD7C7B27F1B0B8611667070F0310E259A15C537A426
+              56CB673533F1184218BA50C9F0F070933227F33DE921826DAF66CE0DF33E5C57
+              5656DECEE8F316D94CCD13C13013B82A82ED6BCA9E33E6B5C5C8B04CC55F261B
+              258ADFEF9707650D88F2BAE6995BE64D18BACFD58C403BA7D9D94F61AEE2A2FB
+              74934DF8083415F3224C7979791623D0F374A1E5CA150182ED61B52C0BC77963
+              CE85292B2BCBA735EC207BBBE689E210DDA821DEAB65BDCCA930CC5532A09AD6
+              B251B926F385ECEC777575FDA9EC79235D1D134E6969A9D5EBF596234A2DE645
+              9AF73F6825DF72D8C85C2521AB65BDCC598BA1A5DC474C91B891A77922F895A9
+              FE3697CBF595B2E79D391186116835C3F256B253CD553C04DB27DADADADCCA36
+              0409170651AE95118861F91AE59A80D9AE1FC1E471C71EE5320C099DF9CAB0CC
+              08B41761E4659EC9C8FC44E62AD59A692C12D66264679FB8D1318D28F20CE80D
+              CAB62BD370244C18BA4E030779C3692A8E92B610578634D378244418D6409B69
+              0D9B95190181B697B2475803FDAA5C8624EE310651A4EBC80833D5CEFE1F08F3
+              20C1F680B20D4BDC8461F4B1314FB99BD8D18259A879FF63747474C866B3C9CE
+              FEDBCA6568E2D695A8F818A238C946892220CAB3661145889B302CFA7CC40ED9
+              C81ED13C130410AC8BD572BBB24DC1ACBB923CEE206ED452F94F09A8878931C5
+              2204222D511F799711AABCB5B57540D9A660568B48592D7B3C9EA711C149BA6D
+              F9F2E527E92EFB57AE5CB99F627904F21BE95186E51FE5F36622E616832896C1
+              C1C13AA6F54F6566665A947B90D6D248CBE9A8ACACBC9C601C40A8B83F709F0B
+              6216865148B6105AC94E7E0B4162CD83B49277946D4A6209BEA9C4913BA8BCAC
+              96A77A35C31208042E5079D3A22BC6C8D3C2A2A2A2D554BC856E120AAEE1F8E8
+              4ADBBC5EEFAB274E9CF0299F29D1D562CE9D3B97CD085431D51602A0C9787376
+              76762B43B747F94C8B2E61A8B8749D159A15C5EB1919193B62FDE394D1D0250C
+              9334798FF66F6586B38FEE53DFDCDCACFBCF0C4645578C397EFCF8C88A152B7E
+              F2F97CC574270B43758ADD6E3F46BCD9C0C2D0D0AB65BDC4345CCBA844CB5945
+              F67B46A723CC5564873F8920133C954D922449EC4B02E24C99C419624C1F81B8
+              8DD5B32C1883D4D6D62E6112584E792E81F93396077B5551109613EB39DC4CEA
+              A7DC15BEC8ACA8A8B8CC62B15472EEC57CF7E7C42F794D64829A9A9A87984B15
+              933D4BF98BE1F18DDFBD441EF1726E016547298BF92546DDC2AC5BB7CEEE7038
+              6A7B7B7B772C5BB62C34DCEFA732252D2D2DBF50E9ABB928A94C68BE23FB3335
+              5C64B7C4A58181816A2EFE193E9FA115A71CA4A2258C6A3F20F695E47721D68D
+              AA4C66CF757D7D7D2FBADDEE31CA37613F470A6D9BCAA6FAC3228ED3E9BCC2EF
+              F77773AE8896D2D3D333C6F53564656575C432B7D2BD56CAC9C9C9A3E25BC344
+              116E6308BF47E5EF27854F02EDDCC1C7B99B179C39732653CE0D1345B885CA84
+              FEBE776F98288295B4BDB0B03093F3458C2DA4F0BDE4557C77F0490482DE1512
+              4550D7B79D1B91AF79F4A15B182E402E36EAA13C150EBEACCC313BE808C3E3F1
+              E48E8E8ED2E3D265245BAC7923083DCF8E3A973B9F430BB3CAF998BACE0507BF
+              197E13668C6E61B843B213F7A9664DF03BFEE0BFCA10E6806C7C07BD8A458B16
+              B94F9F3E7D9E99F339CC8F34EF04F2CA876C6C89E8874867241F62E9D2A56E2A
+              F7575E5E9E74C98873E5B3FCDE3E953FCC21E2F511AEE9436E4A4C6F7AEA1686
+              40394C93ADE6473FE64E4A454F92AA593C1E91F2C58B177F62B55A6BD56B1DF2
+              72E19B749DADF25F22595CE2AFC3E7967349A7A89093181214B5BFBF5F049218
+              744ACAE57354BC41DEED254EC873EE06F93EF95EF97EAEA39E7383C270EE61CA
+              24069D54E77E4CAA9BEF17909224499224C98C4949F9174331525765D62D1100
+              00000049454E44AE426082}
+            FileName = 'D:\Programming\Games\Sudoku\icons\EditMode.png'
+          end>
+        Name = 'EditMode'
+      end
+      item
+        MultiResBitmap.Height = 70
+        MultiResBitmap.Width = 70
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 70
+            Height = 70
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000046000000460806000000712EE2
+              84000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0A6749444154785EED9C0970555719C7B36F6836A009B4A3744AADA87D418949
+              234E594699066D7168E352EBE02046CC9EB482058610BAD8169B9085D4463B36
+              6D55DA684B8BD51659266A07F20067922903A86D5147621AC82A212F2F8BBFEF
+              DE93CE2B2FDB7DEFDEFB5E47FE3367CE39DFC97BEFDCFFF9BEEF7C67B909F9A0
+              21373737CE33B70AA12A0F7A1415152D21FBECE8E8E8606868680A49FADE3632
+              32F26E5454D4DB5555555DDA1F9A84A027A6B8B838736C6CAC8CA2C3E572A546
+              47470F509E0F4117C2C2C2E6506EA6DC4EFE545D5DDD41725310B4C4A0211F81
+              90EFA1186BA97E5C974E891108DA01390FAABA5F084A620A0B0BA321A48EE206
+              5D62082F938A6A6A6AFEA9577D4398CA830638D548B21DA4AF6B02E35883DF69
+              86DC35AAEE13828E187CC86AB4E587143FA44B8C233C3C7C01DFB10F737C4089
+              0C23A84C8951BE01BFB21FA7BA4889CCC0EF49C598D6DFF4EACC10341A939393
+              13CE283F663229826C312D66B71C559F11C2551E5094979747806D14D7932234
+              A18980EC0F93E5646464843B9DCE23BA746A0405310E876315DAF2538AA693E2
+              097E6319E45CB364C992A3274E9C1854E2091170532A2828B85E4C88A22DFE8E
+              DFCA8B8C8C2C50D54911706250F387C86ED66BB6A1502D312645C0881167CB2C
+              B4F9D2A54B5F51223B319728B950952744C088494D4DBD15B5AE98356B56AC12
+              D90A66AADB4A4A4AE6A9AA1702424C5E5EDE4721E5718AD1BAC47EE067528687
+              873FA9AA5E08083144A63BC93EADD7020706E74655F482ADC4885FC1E915D3A1
+              BB9428D04856B9176C25262525E596A1A12199852CDD7D9B2918A0496319DB88
+              6106BA8EA979775454D42C250A3464C3EB6DBDE80D3B35663B295D2F06057A98
+              994EA9B2172C2746FC0AD1ADECC47D4389820587DC6EF73BAAEC05CB8999376F
+              DE679816656AF6797FC502886F69006EBDEA0D4B89C9CFCF974DEB5AFC4ACCD8
+              D8D86F9438D070911E6E6F6F3FAA572786A5C4E06CEF27C92E7F2B55D952F896
+              ECEE6B8D01027D79252929E9D1A6A6A611259A1096AC68CBCBCBC37A7A7AEEC1
+              84EA08E6FAF12F6BABABAB5BA48DD9E913D4AB297E41EA7602524E916EAFABAB
+              9BD4B78CC392FD98B4B4B49B5D2ED7F384DD0974646B4D4DCD8BAA29C4E97476
+              B6B4B43C9B91911107414B95D816D097F590E254D52961BA29B10E4A25AB3F73
+              E64C3CF9B310F48CD670056A6B6B3743CC57299ED725D601CD1D8294473A3A3A
+              5E53A269613A31111111F7922D75381CA78972EFC3F3F7EA2DDEC0BC9AE8F0AD
+              1465C3DA32D0A7D7493BA7F32B9E30CDC728BF92C3833E49F532DAF0351EFC8F
+              7AEBF4600D55412641A0A920883B0B296BE8CB59259A114CD3988B172F7E0C52
+              6A282690AA8C9022C00F95F3F93B284EEB188D8059719B515204A610B371E3C6
+              6BC8EA5A5B5BE5907D3FDAD2A03518047E673FD972A6F49774895F90E06D7772
+              72F23EBD6A0CA6981266F030D9FDA4B750DDD57BF6ECF9ABD6E007F8CE2D64B2
+              12F70968DFEB31313139BB76EDEA572243F08B18E557BE4C279EA6CA408FE632
+              1DBE3735FB0B629E557C670DB1D04D4A3423D09FBFA3B577629E6D4A64187E99
+              526F6FEF023A2EB71292487BCC244580691D809465147FA54B66064829F78714
+              81CFC4949595CD91D16C6B6BBB96EA414C481CAFE9E0013B4877A30512064C07
+              998E9F20E47F41AFFA0E9F892168CA27FB12F1CABFC94BF12B17B5068B80F654
+              A2092B188CA934E1CF6EB77B6B4545C5B0AAFB0C5F9604A1D8FE0A3AF963CA6E
+              72B94970586FB2162C25CE656565EDA528D1F5624DA880C69E636ACE6580DE52
+              22BF60D8F99696965E4B275EA598867A3FCE48DEA7B7D80B66AD7BC864B931FE
+              0CDF66801A55D96F183225D98D831459DF38C4F353AED55BEC07243C47D6431A
+              C3BC1AF12BBFD01A4C82216252535393E9841CA986424C637D7DFD3FF416FB51
+              5050204B0F990D5B30E71F98E1573C61D4F9CEC58E17CA6A9569F43875D3D65A
+              06108A19DDDDDFDFBF1E8D6D67A03661CE9DAACD341822062D994F369F45D910
+              E49C1091D6602320454E1A6A12121222181CB9BEFA27BDC55C18D518D963D1F6
+              3798162F6B121BA10EE11F25CD4653F60E0E0EFE5C6BB00046891132DC98D368
+              5C5C9CACA26D05646C255B413A191919297B3D93EEF2FB0BA3C49C475BC62026
+              8E7CA192590E759746CEBB73214736D337575555496069190C11333434740EFF
+              728E622C33C11775A9F56036CCE4F764035D2E473FC0547D486BB010868851DB
+              94723E443F43EF907323ADC142C89937BF251799E5B77ECDE03CA135580CA3A6
+              2433D35364FF21A5312B9468420B012972CD752553F39B98AFA57EC51386D74A
+              4EA7B33B232343346615D54F6566665E660DA39D19990C5993DDD5D7D7F710BF
+              D5C720E4B10E92D8C916F874AEB478F1E253F81AB9E3227B25B741544C7676F6
+              91E6E666D3E21ACC54E295A76363631371F6DB89576433CC36F844CCC993275D
+              28C96B688B549733A29F27A6C8484F4F6F3B7EFCF8BBDA1FF901399B828C2A92
+              5C397DD9E572DDCB6F8EEAADF6C0B08FF104B3831C79ACC5F6E5DDA06CD4FD77
+              A8FF37B5463F8036CA99F76A59A8F29DB6F9154F98B2D6292E2E5EC043ECA638
+              FE8E50656F6FEFD6C6C6C629AFA55F0979A7A0BBBBFB768ACF93E456826C2504
+              E496842967D798550F692FBE660CB392C8342B2626E6735959596F1E3B764CDE
+              579C111C0EC7323E2F472F4910BD83C5A14FC73066C02F53BA123CC84E22D3D5
+              1465176D25BE414C4BAE7F84AC5BB72E46F289505A5A9A8CD67D1752245EB98E
+              F46A7272B25C360A182CD93690C00F1FB19B07D5DE1162F49FA1FE12A475439E
+              BC3BB4807A1FC15A0CB96C932EE7CFBE43927D9EA324B99570463E1B2858BA9F
+              525454B489EC1192FC8ECC56C33CF41B24B9B9D9072172433C8BB2ACD8BB70B4
+              7FA0F824E4CDE89D222B61F94613A6243E271F023271C8A9B28FA2B7687B39A1
+              4208B39068C98B44B72FD4D7D7FF576F0E2C2C2746909B9B9B80334EC7941230
+              9D2C4818422CEF117453FE0BA41D464B6416FAFF058E567BDB04334BD10457F1
+              C182CFA6C4886FC40C966206ED38CD6ACF8D23B46221FEE2FBB4CFC1740E5557
+              57BFEFBA999AC2C5F774D05E47BBECF168905776F039057C3675D1A29BE4ECC8
+              304E9F3EFB1CFD7A83E0F0274A641886899178243E3EBEB4ADADEDC1B4B4B4F1
+              38E8000FB3A1B2B2F25F3CB4DCCA94AD895BF426EDB2B19C56364864DBD5D555
+              04693FE2EFA3F4E690C3F89E0D4CCFEF40F68D947F065972FD4C204B01D99CF2
+              847CDFA431D1385A5B5B47E9DFA6A4A4A4DA8A8A0AF169866038C09B3D7BF65C
+              1E7C8B072982556EB77BFC153EF9D703E3A408E4F2F336F12D172E5C4890CF7A
+              9022580911E3EF44DFE9418AE04A5204D3922250FDDBCE40C8A526C3304C0C23
+              2A9DF5BAFECE03CB6D2AC9BDDE011A18189843148CC585CB549DA84BDF87B92A
+              9FF4FD211F11CF6F7A0EC28C619818465FFE818D9C5D7BE23C72ED601F620E42
+              821C9DBE87B8B8B8A6CECECECB83838372BB49FE5B872724F03B2005483F4232
+              EDE6387DDAC7A0F8740BC3303138CA5ED4BD881F7D055F210F2AA17B116B1BED
+              E02B3131F1B7919191A5046EF2BF147AF9BB5F623A5BE42A694343C300F23264
+              4DF259D2598828696F6FD748EDE8E81082C40719BE4CE809F96EE91FA94CED53
+              5FC555588A9090FF015FAB2C34D56AD2A40000000049454E44AE426082}
+            FileName = 'D:\Programming\Games\Sudoku\icons\ClearCell.png'
+          end>
+        Name = 'ClearCell'
+      end
+      item
+        MultiResBitmap.Height = 82
+        MultiResBitmap.Width = 82
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 82
+            Height = 82
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000052000000520806000000C72C83
+              9B000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0B5649444154785EED9C6F6856D71DC78D8956ECD645E214ACABBA9568128365
+              4CEB6C6A99056B2B2E6A2213541CC537EB5E14DF8C42596BB30DC6DE54DFB837
+              D2CDA9E030890912B481DA21EAB0B5302746239656A752EDCAD2B28A5363F6F9
+              9EFBBBB7F75EEF7D7C9EE449CCF3F87CE0E69E3F37CF3DBFEFF99D73CFBDF79C
+              3BA6448912254A94186ECA6CFF40686C6CACACA8A8A8BF7BF76E2DD1EAB2B2B2
+              59ECA7139F4AB8B2B7B7F75177A0317BF6ECAF070606FAC68E1D7B8DE865C29F
+              B03F4FBCE7CE9D3BA73B3B3BFBDC810F801117B2A9A9A90E0116137C86FDD308
+              F6A4973334F8AD0BFCD60982C7D81F696B6B3BE3E58C0C2322E4BA75EB1EBB79
+              F3E6F2FEFEFE17F19EA5244DF5721C7D88701AE37B089F372FBB8CA75E1B3F7E
+              7CDFAD5BB7BED641841F255C89E7E97FA773BCBCB79AE36B09D713AED471C635
+              BCBABBBCBCFCE0840913BAF6ECD9F395A50F1BC32AE4AA55ABA6B06BC6D026F6
+              4B5C2260E419790DC163187BA2B5B5F5829733389A9B9B9FA4929E26282F5F4C
+              65D579398EC3A4B5B16FDDBF7FFF752F29FF0C8B906BD6AC29C7B00D18B01EC1
+              9E571A61794517F183B76FDFEE3E70E080FAB9BCB362C58AA9E3C68D5BCAF95E
+              24BA9CF33DA674E2EF11DE4DC5EDDAB76F5FBFD2F249DE855CB972650305DEC4
+              B6D192E405ADF20A3CE2B0973432D02296500EB5866636B50E09BA936D474747
+              C751C5F3453E852CA3E0AFB07F85C2D79E3B77AE9FABEC2E9AD96E3AFEF7BC43
+              9241FC1FB09BC7B1B5347B5DBD67B24D23AD8AED5B3A06FECBF605225C65FB94
+              63CF73ACFAD55388F2B13B22052E70CF73EC7A46011BE6CC9953CEFFEBFFB653
+              B1DBD90FB88386485E845CBD7AF50C0AB719E35FB5A4A3847720E04E8BDF03A2
+              CFE7989F10D4157C11DB24A50F82FFB01D673B4219DE479C0F5D6A0208BA9163
+              36116C509CF036CAF0767B7BFB45C587C29085A4703FA240BF22B8864DB5BB1D
+              6FD9CE0544B51E61D9B2658F4C9C387125C1156CCBD9C257DA7CA0716417DB81
+              1B376E741C3A74E87F2E3504172679BD6B396CB27F1F62FE814A3FA9FCC13224
+              21F1C4C588F83A0559CAB0E4224316D5EE36CB8E8007AEE5B8B5041BBD9461A7
+              93B2EDC543F75A3C02657F95326FA6CC6A4DDD94ED77945D238941516EFB9C31
+              11DFA200EA7F4EE2855B28F43B961D80C72EA25F7A93FEA965F2E4C935963C12
+              CCE19CAB1A1A1A9EA8ABABFBF7D9B367FF65E90EE2276A6B6BAF60C32CCAFEAC
+              F6C43F217D50CD7C50425A73DE62221E6148B185DA3C60D93EBAF8FC92FC160A
+              FA02228EB5F41143E7A48C3FA40C0B6B6A6ACAB800469A2FF11E44BE48FE0CCA
+              F81C363D4EFC1C625EB543B2266721756161274FFCA93C5122D2BF747BB91E8C
+              239FC00B25740B9B1B763C485406B69710F33B73E7CE3DDBD3D3F3A565C9333F
+              46BCABD85223CF246912C77D407A704C36E42A649909F4B2FA4435E7B8273636
+              363E45A124B4AE8EA38D85DC284C6358768166FF99A5393111AF8FBC05D8B408
+              CF94F7BE6BD9599193906AAA08D442704022C6FB44C6830BF05089B8CA92461D
+              946D2E65FF9EC444AC2B96EC37738D3A5EE0988538CCE7A4A50EA5E2642DA4DD
+              B1A8A97E97E8763CF14D2FC7439E2811096A5833DAD1A07F5A7575754FCC334F
+              E099B26F01DB4CC4FC27625E7299F721AB0B80EE9D39B16EFBF4DCF02835AA3B
+              8200F589E4BD46B01044F4D17DF86B2ABBC51D669B6E28F45469936CF7723293
+              95907A00C18F6EA476FAD9EF880DB6CBC8DF4C017E66F182416556D90906E369
+              D9261BCDD68DB2DDB232725FB5E91775D555BFF7FDAAAAAABFD0A4D57C0342FD
+              66A1724F7F48133FC5F87316763DC585E7DB34F743E4BBE7A26964E3917A9EA8
+              4761D7A9C1DD5E928706DB9CE817162D5864836CB1A8C36CBD6EB6EBE9514632
+              0AA927DBFC901E4389D6F8531C86392F73C2F043D4824436C8168B3ACCD65685
+              A581B450388D8C42EAF500BB25D4D8576C7ACA1CA07B67AE783FB768C1235B64
+              93451DB259B6135C625AA49251483A5A3D65165D8C198387B27A8A432DADA56F
+              C975403F6A912DB249B659D218B3594F93C25A24922A247D461D2EAF175572ED
+              832ED1B0476123F51467246934DB027CDBA58534718909A40A894BEB81EB54FA
+              8E337AC7E2A506E87962B112B14DB64B0382534D93443235ED67F4871A39127E
+              51453F329F5D210DBC7365B9D9E890EDD2C0A24E93241285D40C08D4D7EB4D71
+              CCF60E7E54AF07F2FD647B3451693686711A481369E35262240AA96924FC9866
+              40F471FFACD90B6152DDBB8888D8681AF4491369E3A5464914923E41F7D4AA81
+              D3E197F7F6B62F32702D521699AD0E69202D14F6B58993D64756EB0F35107F81
+              358F6DB06FFB0A09D9285B03425A386DE2240AC93F695E8D386F7B074380C4DA
+              2846126C755A84B48990E691D3F50777D684A600DC3AB1368A91B8AD212D9C36
+              71D2FA487FB6D865DB3BA88D99162C7A126C755A84B48990D6B4DD255E53EB5C
+              8241BAA6913C14C46DF5B5F0B58993282437F06EA6ACE627BA846FD05C9C8785
+              88ADBE16BE3671D2FA48873FC933843FA1E96120626B821611320A59227B320A
+              A9E9C616F4D1D4BA878588AD095A44481452AB07B4D79C6D97F00D5FD8FE6120
+              62ABAF85AF4D9C44211933B98ED526BE07909EF39C9842256EABAF85AF4D9C44
+              2119D5FBC39EC8E0931FF9D482454F82AD4E8B903611D2FA4837F864CC14B91D
+              E24722B78CC54CDCD69016919B149FB4A6EDDF0E456E9318D5DF330BB75849B0
+              D56911D226429A47BADAE09FE237EEA7D83467BBD8918DB23520A44562AB4CEB
+              235D6DE0CEF55A0CE412C1560F68E27BB1733CBC52421A480B857D6DE2240AC9
+              15EA3435A007BA95FDDE8AAA30839E675D40446C340DF4FAE582B4F152A3240A
+              A955A6D480FF8A21F2C2871F7B9F5DE210A048D0DA48D918C67F1178226D056E
+              5A1F29FC173E8BB52CCDA5C07E6F1D8B7B695EA468324430A14AB64B038B465E
+              0486491512F5E5DED7E813EAB4B6CF4B0D884FBC2F2622B6C976694030FC5AF6
+              1E52856C6B6B3BC310C04D0CA04622D335B418885DA7172B2A3ACDB600DF7669
+              214D5C6202999AB65E43FA5355F4D23C5826AC15559C60AF26635A52C1235B64
+              5378B598D9EC264384B44824A3905A34CEEE302E1D9EDEE7A01FD9CB0DFC9F2D
+              5AF0C816D96451876C96ED040F9B16A96414522BEFA9257F3A5F735353935B7B
+              ED43DFF10E2E3FA29F3C180E64836CB1A8C36C75134CA5C1FDBE42905148436B
+              AD35E9720A275CEF2579D0671CA7C6FE68D1824536C8168B3ACCD62966BB9B70
+              9A89FB0A89BB6BFAAF9BF2DCDBDBBB819AF217B43BC8D72A80AD5EAC20D96A36
+              04C846D9AAB06C97062E2303D978A43ADA5DD4CC4E4DC664BF494B752D4B0C90
+              FF3635F8578B170C2AB3CA4E3058FC2EDB64A3D9BA53B65B5646B21252DF80E0
+              4777B0E93EB3810268AD7300F997C8FB3DC1421AA877A9CC2ABBC51D665B836C
+              95CDD97EFF22EBA9CB0C0F2ED5D4D4E0E9652F119DAFB57B5A29E5E5BA66FF99
+              96A591AFF7C1A37D46461782B570BBF791C51D5AC3CDEED76C5A77F356474747
+              64DE7C26729A038E98277179CD1F5CC8CD7B8DD63B93163C0D217C45CBD2084E
+              E298B95EEAE842CD394944C68C6BFAFBFBDFE0EAAD8713DBE8177F6B595991F3
+              647AC43BCBEE714EA83536B3B4DE59AB4BBD5CCF33EBEBEB3F204FB5BAD04B1D
+              356CADA8A8F84D7B7B7BAFC51D5C5C9622EE1BF487EAFBF56986166CCAE9C14C
+              CE4272822FB5D21EA16622E6B3146086D63B87C5D47A68E2DD78EFE71C378382
+              3DD035DB945163DD16795978ADB6908878E2EBD8F263CADACD5E42CB59726250
+              CB3B10E92A62EA02A3CF183C4741E9326BFAC2CD5C10FF1091FFC171F2D47923
+              FD1501CEDF5F5555F5273CAD0571DA2D3940CD599E6822FE4D9EC8617FB7EC9C
+              287D1C244F1F0719929082A651FA5C0D0C5948A1EF5C2066E9034A79A2F449AF
+              7C629F6C287D642E1FE8F3050C294A9F3DCC177884BCA0F421CE7C51FA34EC30
+              40C75FFA5871BE29A6CF67972851A2448912C3CC9831FF078E1665CA12109244
+              0000000049454E44AE426082}
+            FileName = 'D:\Programming\Games\Sudoku\icons\checkbox_checked.png'
+          end>
+        Name = 'checkbox_checked'
+      end
+      item
+        MultiResBitmap.Height = 82
+        MultiResBitmap.Width = 82
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 82
+            Height = 82
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000052000000520806000000C72C83
+              9B000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              086249444154785EED9C4F6815471CC74DA22208921E6A0E0A2A88FA12A497FA
+              A7182344B058B1FE4972A94ADA92933D88172FD2FAA7EDA517F19253681BD45E
+              F212232108A186224A89F562434C148B44AC107B791504515FD2CF7776565E5E
+              77F7FDC9CB9FB7BB1F7899D999CD7BF3FBCE6F6677766766514C4C4C4C4CCC6C
+              5361C379E1C08103D58B172FDE3C393959CBE1868A8A8A7584AB39AE215EFDE0
+              C183E5E644CBC68D1B5F4E4D4DA52A2B2B27387C4AFC31E1438EEFBF7DFB76F8
+              DAB56B2973E23C30E742363535D5214003D11D84DB106CBD933333F8AE477CD7
+              10D1DB8437BBBBBB479C9CB9614E843C72E4C88A57AF5EED4BA7D37BF19E3D24
+              D538398614220C63FC7DE20FAD973DC55327962E5D9A7AFDFAF54B9D447C39F1
+              6A3C4FFFBB9AF3E5BD1B38BF96F866E2D53ACF3281570F5455555D5FB66C59FF
+              952B575ED8F4596356853C74E8D04A82660C6D226C3489809123F21AA2B73176
+              28994C3E72728AA3B9B9793D95B48DA8BCBC81CAAA73720C83A4751326AF5EBD
+              FADC492A3DB322644B4B4B15861DC380A308B65B69C4E515FD1C5F7FF3E6CD40
+              5F5F9FFAB992B37FFFFE9A254B96ECE1F7F672B88FDF5BA1748E6F10BF4CC55D
+              EAEAEA4A2BAD94945CC883070FD653E0363EAD36495E909457E011834ED2DC40
+              8B68A41C6A0DCD7CD43A2468279F8EDEDEDE5B3A2E15A514B282821F273C4EE1
+              6BC7C6C6D25C652FD1CC2ED3F1DF704E991FB8C0EDA63B39CA5DC0B14D9B3655
+              21A4FAE3762AB69D70CA9C34434A22E4E1C387D750B8930878C226DD22DE8180
+              9DF6784180A0AD94B38D68BD8E895FA49C177A7A7AC6753C13AA6C583414EE43
+              827314E84B42D56E3B5E7806117F55FE42627474F45E5D5DDD1002EA700B65DE
+              4EB8AAB6B6F63179CF94582C33F2483CB181429DA6407BB82D19E79645B57BD1
+              662F6828FB09CA7C9232AB350D60C3F7945D77124551B4475A11E589EA7FEEE2
+              8567E9737EB4D90B1E3C70084FFC1B1BD651F69D0AAD6716D5CC8B1252CD991F
+              3E6B45BCC92DC5596AB3CF66970D5C10EFD3D4C7B1610D62EEC2A6551C8F15D3
+              CC0B165217160279E2A7F24489487F38E0E4961F88F617E23DC396843C93A4F7
+              1289C41DD2FF75CEC88F4A1BE64B05B57692B0457D2262FE50CE22BAC806D922
+              9B386CB1361674FD28C823B94FFC8A1F3C4F74AADCFAC45CD866AECBF9C7D8B8
+              9DFBCD7F48FBC3C9CD4DDE42DA11CB793EEF73D84E9F78C6C9090FBA00D1AC65
+              DF563E6B11F34FC47C6232739057D3D6D8190135ECD373C35B78A34604A1C4DA
+              A601859E2AB5C976272798BC84D40308BEB455C33EC28E6432A9215628916DB2
+              D1DADA2ADB6D5620393B54FB28EC17BE74379DF0CFF48B5F3839E106BB7FC2E6
+              CFB159CF093EC3EEC04770F978A49E27EA51D873DCFEB293147EACADCFADED7A
+              7A1448A0907AB2CD17E9319448729B30AF4F71E6126B6B527169202D14F72350
+              48BD1E2068C4BD5FF0D153E648219B653BD146AB852F8142EA1D8B8DF6D347CC
+              E943D98580B5B95FF10C2D3CF115526FFBE827F4A24AAE7DDD244610D7766921
+              4D4CA207BE42E2D27A655AC3187444EF589CD4E821DBA501D11AAB8927414D7B
+              87FE50233767EB45553920DBA5813D349A78E129A46640A0BE5E6F8ADB368C32
+              460369226D4C4A169E426A1A09B5A0191029BD777652A38BD520254DA48D933A
+              1D4F21E91334A6560D0CCFF4E57D189006D24271579B6CFCFAC80DFA430D8476
+              4C5D28195A186DB2F114927FD2BC1AF1D08631568B0C6DA6E1E791ABF50777D6
+              84A618C8D0C268938D5F1FE9CE167B6AC318AB458636D3F06BDAE612AFA97526
+              21E69D16AE36D9780AE9CE94D5FC449310F34E8BEC59C42E7E7DA4C19DE41993
+              5B8B402163F22750484D37B6D1C8934B0B4F21B57A40A1E66C9B8498775AB8DA
+              64E32924F74CA663B513DF63C0D5C2D5261B4F212B9D752CC2F3E633A2182D32
+              B499865F1F696E3EFD86435124430BCF418A5FD37687439E03F48862B4F01B36
+              FB79A419A0F34F9E8F8CA24886169E0F72FCFA48F3C80877DEACC5402631C248
+              0369A1B8AB4D369E4272851AA606F440B73AEDACA88A345603BD7E79246D9CD4
+              E9780AA955A6D480FB8AC1F7854F84705F040EF9ADC0F5EB2385FBC2A741CBD2
+              4C4A0491EDD2C01EFABE08F41512F5F50A72823EA14E6BFB9CD4E821DBA501D1
+              CCD7B2FFC357C8EEEEEE91C9C9493331801A099CAE11665CDBA5853431891E04
+              356DBD8674A7AAECD302491B8F0CD66633792A430B4F0285D4A27182415C3A73
+              7A5F6490CDB29DE8A0D5C2974021B5F21ED776A7F33537353599B5D751C0DA6A
+              26984A835CBB10040A69D15A6B4DBA5C493F71D4490A3FD6D695D67633E13488
+              9C426AEE34EE6DA63C6BBD3335E52E680F2DB251B62A2EDB73CD1F17F978A43A
+              DA4BD44CA75D34DEC69029B46370D9261BADAD9DB2DD6605929790DA03822FED
+              E0A371663D6EAF9D024289B5AD5EB6CAE67CF7BFC87BE59756402512093CBDE2
+              130EB7104F69A594931B0EB4869BE06B3E5A3673AEB7B737EF79F305AD4544CC
+              BBB87C35626E67F09ED07A67D24231D18A7BC696743AFD0DA3183D9CB848BFF8
+              9DCDCA8BBC9A760653887881B0CBAEBC3F45C75CF6C347D9205B6413875DD6C6
+              82360D29C82385D6316BA53D3FBC96DADB499FB246EB9DB5EED99E525648443C
+              F134B67C844D0384DFF6F4F48CDAECBC2958488168CF10F3093FAC6D0C762126
+              5D6622556ECD5CCD99B2AB394BC4DFF0C4F388F8BBCD2E88A2841488396E3D73
+              953C935ADDAAF5CEE57201D285457D22B737BADDD1C2778958F4E62005AD92F7
+              82A6A1FD2D4E116DE1E36E57D3BE5057D0EA3ED1DEE2E823FBD5276A2784BBCA
+              2F96A23DD245CD9C667D0731298FD947672BF10FF0D649F2EE39672D0C3462A1
+              6C5AB0AF31B4B695D0064AF2C482FBC46C66EC9119C45B7A95927893B912126F
+              7B5862F0887823CE52126F0D3B0BD0F1C79B15979A306D9F1D131313131333CB
+              2C5AF41F6A12A4FFC7A1D9340000000049454E44AE426082}
+            FileName = 'D:\Programming\Games\Sudoku\icons\checkbox_unchecked.png'
+          end>
+        Name = 'checkbox_unchecked'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'pause'
+            SourceRect.Right = 44.000000000000000000
+            SourceRect.Bottom = 44.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'back'
+            SourceRect.Right = 40.000000000000000000
+            SourceRect.Bottom = 40.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'undo'
+            SourceRect.Right = 70.000000000000000000
+            SourceRect.Bottom = 70.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'EditMode'
+            SourceRect.Right = 70.000000000000000000
+            SourceRect.Bottom = 70.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'ClearCell'
+            SourceRect.Right = 70.000000000000000000
+            SourceRect.Bottom = 70.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'checkbox_checked'
+            SourceRect.Right = 82.000000000000000000
+            SourceRect.Bottom = 82.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'checkbox_unchecked'
+            SourceRect.Right = 82.000000000000000000
+            SourceRect.Bottom = 82.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'next'
+            SourceRect.Right = 40.000000000000000000
+            SourceRect.Bottom = 40.000000000000000000
+          end>
+      end>
+    Left = 360
+    Top = 32
+  end
+end
